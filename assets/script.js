@@ -150,12 +150,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // shop cart
-
-$('.cart-button').click(function() {
-  $('#cart-shop-open').css({
-    'display': 'block'
-  });
-  $('#cart-shop').css({
-  'display': 'none'
-  });
+document.getElementById("submit").addEventListener("click", function () {
+  alert("Successfully");
+});
+document.querySelector('.cart-button').addEventListener('click', function () {
+  document.getElementById('cart-shop-open').style.display = 'block';
+  document.getElementById('cart-shop').style.display = 'none';
 });

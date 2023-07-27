@@ -1,163 +1,373 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <style>
-        <div class="container d-lg-flex"> <div class="box-1 bg-light user"> <div class="d-flex align-items-center mb-3"> <img src="https://images.pexels.com/photos/4925916/pexels-photo-4925916.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="pic rounded-circle" alt=""> <p class="ps-2 name">Oliur</p> </div> <div class="box-inner-1 pb-3 mb-3 "> <div class="d-flex justify-content-between mb-3 userdetails"> <p class="fw-bold">Minimal Icons by Oliur</p> <p class="fw-lighter"><span class="fas fa-dollar-sign"></span>19.00</p> </div> <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel" data-bs-interval="2000"> <div class="carousel-indicators"> <button type="button" data-bs-target="#my" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button" data-bs-target="#my" data-bs-slide-to="1" aria-label="Slide 2"></button> <button type="button" data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button> </div> <div class="carousel-inner"> <div class="carousel-item active"> <img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="d-block w-100"> </div> <div class="carousel-item"> <img src="https://images.pexels.com/photos/270694/pexels-photo-270694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100"> </div> <div class="carousel-item"> <img src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="d-block w-100"> </div> </div> <button class="carousel-control-prev" type="button" data-bs-target="#my" data-bs-slide="prev"> <div class="icon"> <span class="fas fa-arrow-left"></span> </div> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button" data-bs-target="#my" data-bs-slide="next"> <div class="icon"> <span class="fas fa-arrow-right"></span> </div> <span class="visually-hidden">Next</span> </button> </div> <p class="dis my-3 info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quos ipsa sed officiis odio libero consectetur placeat dignissimos et ab dolorum, nemo id provident quidem modi, dolorem dolores quas quasi. </p> <p class="dis mb-3 updates">Free updates forever</p> <p class="dis mb-3 different">Three different colored sets:</p> <div class="dis"> <p class="black"><span class="fas fa-arrow-right mb-3 pe-2"></span>Black</p> <p class="white"><span class="fas fa-arrow-right mb-3 pe-2"></span>White</p> <p class="pastel"><span class="fas fa-arrow-right mb-3 pe-2"></span>Pastel</p> </div> <div> <p class="dis footer my-3">Here is a quick guide on how to apply them</p> </div> </div> </div> <div class="box-2"> <div class="box-inner-2"> <div> <p class="fw-bold">Payment Details</p> <p class="dis mb-3">Complete your purchase by providing your payment details</p> </div> <form action=""> <div class="mb-3"> <p class="dis fw-bold mb-2">Email address</p> <input class="form-control" type="email" value="luke@skywalker.com"> </div> <div> <p class="dis fw-bold mb-2">Card details</p> <div class="d-flex align-items-center justify-content-between card-atm border rounded"> <div class="fab fa-cc-visa ps-3"></div> <input type="text" class="form-control" placeholder="Card Details"> <div class="d-flex w-50"> <input type="text" class="form-control px-0" placeholder="MM/YY"> <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV"> </div> </div> <div class="my-3 cardname"> <p class="dis fw-bold mb-2">Cardholder name</p> <input class="form-control" type="text"> </div> <div class="address"> <p class="dis fw-bold mb-3">Billing address</p> <select class="form-select" aria-label="Default select example"> <option selected hidden>United States</option> <option value="1">India</option> <option value="2">Australia</option> <option value="3">Canada</option> </select> <div class="d-flex"> <input class="form-control zip" type="text" placeholder="ZIP"> <input class="form-control state" type="text" placeholder="State"> </div> <div class=" my-3"> <p class="dis fw-bold mb-2">VAT Number</p> <div class="inputWithcheck"> <input class="form-control" type="text" value="GB012345B9"> <span class="fas fa-check"></span> </div> </div> <div class="my-3"> <p class="dis fw-bold mb-2">Discount Code</p> <input class="form-control text-uppercase" type="text" value="BLACKFRIDAY" id="discount"> </div> <div class="d-flex flex-column dis"> <div class="d-flex align-items-center justify-content-between mb-2"> <p>Subtotal</p> <p><span class="fas fa-dollar-sign"></span>19.00</p> </div> <div class="d-flex align-items-center justify-content-between mb-2"> <div class="d-flex align-items-center"> <p class="pe-2">Discount <span class="d-inline-flex align-items-center justify-content-between bg-light px-2 couponCode"> <span id="code" class="pe-2"></span> <span class="fas fa-times close"></span> </span> </p> </div> <p><span class="fas fa-dollar-sign"></span>5.00</p> </div> <div class="d-flex align-items-center justify-content-between mb-2"> <p>VAT<span>(20%)</span></p> <p><span class="fas fa-dollar-sign"></span>2.80</p> </div> <div class="d-flex align-items-center justify-content-between mb-2"> <p class="fw-bold">Total</p> <p class="fw-bold"><span class="fas fa-dollar-sign"></span>16.80</p> </div> <div class="btn btn-primary mt-2">Pay<span class="fas fa-dollar-sign px-1"></span>16.80 </div> </div> </div> </div> </form> </div> </div> </div>
-    </style>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yummy Pet Palate</title>
+        <link rel="icon" href="assets/image/logo.png">
+        <link rel="stylesheet" href="assets/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+        <link rel="stylesheet" href="assets/login.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+
+      
+      <style>
+      body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; 
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; 
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; 
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  a {
+    color: #2196F3;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  </style>
 </head>
 <body>
-    <div class="container d-lg-flex">
-        <div class="box-1 bg-light user">
-            <div class="d-flex align-items-center mb-3"> 
-                <p class="ps-2 name">Oliur</p>
-            </div>
-            <div class="box-inner-1 pb-3 mb-3 ">
-                <div class="d-flex justify-content-between mb-3 userdetails">
-                    <p class="fw-bold">Minimal Icons by Oliur</p>
-                    <p class="fw-lighter"><span class="fas fa-dollar-sign"></span>19.00</p>
-                </div>
-                <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel"
-                    data-bs-interval="2000">
-                    <div class="carousel-indicators"> <button type="button" data-bs-target="#my" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
-                            data-bs-target="#my" data-bs-slide-to="1" aria-label="Slide 2"></button> <button type="button"
-                            data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button> </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active"></div>
-                        <div class="carousel-item">  </div>
-                        <div class="carousel-item">  </div>
-                    </div> <button class="carousel-control-prev" type="button" data-bs-target="#my" data-bs-slide="prev">
-                        <div class="icon"> <span class="fas fa-arrow-left"></span> </div> <span
-                            class="visually-hidden">Previous</span>
-                    </button> <button class="carousel-control-next" type="button" data-bs-target="#my" data-bs-slide="next">
-                        <div class="icon"> <span class="fas fa-arrow-right"></span> </div> <span
-                            class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <p class="dis my-3 info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quos ipsa sed
-                    officiis odio libero consectetur placeat dignissimos et ab dolorum, nemo id provident quidem modi,
-                    dolorem dolores quas quasi. </p>
-                <p class="dis mb-3 updates">Free updates forever</p>
-                <p class="dis mb-3 different">Three different colored sets:</p>
-                <div class="dis">
-                    <p class="black"><span class="fas fa-arrow-right mb-3 pe-2"></span>Black</p>
-                    <p class="white"><span class="fas fa-arrow-right mb-3 pe-2"></span>White</p>
-                    <p class="pastel"><span class="fas fa-arrow-right mb-3 pe-2"></span>Pastel</p>
-                </div>
-                <div>
-                    <p class="dis footer my-3">Here is a quick guide on how to apply them</p>
-                </div>
-            </div>
-        </div>
-        <div class="box-2">
-            <div class="box-inner-2">
-                <div>
-                    <p class="fw-bold">Payment Details</p>
-                    <p class="dis mb-3">Complete your purchase by providing your payment details</p>
-                </div>
-                <form action="">
-                    <div class="mb-3">
-                        <p class="dis fw-bold mb-2">Email address</p> <input class="form-control" type="email"
-                            value="luke@skywalker.com">
+    <body style="background-color: rgb(198, 242, 248) ;">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" alt="Yummy Pet Palate" class="
+                        logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto ">
+                
+                <li class="nav-item mt-1">
+                  <button class="cart">
+                    <i class="fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
+                    <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
+                  </button>
+                </li>
+                <li class="nav-item mx-2 mt-1">
+                  <button class="icon-login" id="user-btn">
+                    <i class="fa-solid fa-user-plus fa-lg" style="color: #c187d1;"></i>
+                  </button>
+      
+                </li>
+                <li class="nav-item ">
+                  <div id="navigation">
+                    <div id="menu" onclick="onclickmenu()">
+                      <div id="bar1" class="bar"></div>
+                      <div id="bar2" class="bar"></div>
+                      <div id="bar3" class="bar"></div>
                     </div>
-                    <div>
-                        <p class="dis fw-bold mb-2">Card details</p>
-                        <div class="d-flex align-items-center justify-content-between card-atm border rounded">
-                            <div class="fab fa-cc-visa ps-3"></div> <input type="text" class="form-control"
-                                placeholder="Card Details">
-                            <div class="d-flex w-50"> <input type="text" class="form-control px-0" placeholder="MM/YY">
-                                <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV"> </div>
-                        </div>
-                        <div class="my-3 cardname">
-                            <p class="dis fw-bold mb-2">Cardholder name</p> <input class="form-control" type="text">
-                        </div>
-                        <div class="address">
-                            <p class="dis fw-bold mb-3">Billing address</p> <select class="form-select"
-                                aria-label="Default select example">
-                                <option selected hidden>United States</option>
-                                <option value="1">India</option>
-                                <option value="2">Australia</option>
-                                <option value="3">Canada</option>
-                            </select>
-                            <div class="d-flex"> <input class="form-control zip" type="text" placeholder="ZIP"> <input
-                                    class="form-control state" type="text" placeholder="State"> </div>
-                            <div class=" my-3">
-                                <p class="dis fw-bold mb-2">VAT Number</p>
-                                <div class="inputWithcheck"> <input class="form-control" type="text" value="GB012345B9">
-                                    <span class="fas fa-check"></span> </div>
-                            </div>
-                            <div class="my-3">
-                                <p class="dis fw-bold mb-2">Discount Code</p> <input class="form-control text-uppercase"
-                                    type="text" value="BLACKFRIDAY" id="discount">
-                            </div>
-                            <div class="d-flex flex-column dis">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <p>Subtotal</p>
-                                    <p><span class="fas fa-dollar-sign"></span>19.00</p>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <p class="pe-2">Discount <span
-                                                class="d-inline-flex align-items-center justify-content-between bg-light px-2 couponCode">
-                                                <span id="code" class="pe-2"></span> <span
-                                                    class="fas fa-times close"></span> </span> </p>
-                                    </div>
-                                    <p><span class="fas fa-dollar-sign"></span>5.00</p>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <p>VAT<span>(20%)</span></p>
-                                    <p><span class="fas fa-dollar-sign"></span>2.80</p>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <p class="fw-bold">Total</p>
-                                    <p class="fw-bold"><span class="fas fa-dollar-sign"></span>16.80</p>
-                                </div>
-                                <div class="btn btn-primary mt-2">Pay<span class="fas fa-dollar-sign px-1"></span>16.80
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                    <ol id="nav" class="nav">
+                      <li><img src="assets/image/home.png" alt="home" class="icon"><a href="index.html">Home</a></li>
+                      <li><a href="category.html"><img src="assets/image/categories.png" alt="category"
+                            class="icon">Category</a></li>
+                      <li><a href="blogs.html"><img src="assets/image/blogger.png" alt="contact" class="icon">Blogs</a>
+                      </li>
+                      <li><a href="contact.html"><img src="assets/image/telephone.png" alt="blog" class="icon">Contact</a>
+                      </li>
+      
+                    </ol>
+                  </div>
+                </li>
+              </ul>
+      
             </div>
+          </div>
+        </nav>
+        <!-- navbar ends -->
+      
+        <!-- LOGIN STARTS -->
+        <div class="overlay" id="overlay">
+          <div class="overlay-content">
+            <div class="section">
+              <div class="container">
+                <div class="row full-height justify-content-center">
+                  <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                      <h6 class="mb-0 pb-3"><span class="login">LOG IN</span><span class="login">SIGN UP</span></h6>
+                      <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                      <label for="reg-log"></label>
+                      <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                          <div class="card-front">
+                            <div class="center-wrap">
+                              <div class="section text-center">
+                                <h4 class="mb-4 pb-3">LOG IN
+                                </h4>
+                                <div class="form-group">
+                                  <input type="email" class="form-style" placeholder="Email" required
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                  <i class="input-icon uil uil-at"></i>
+                                </div>
+                                <div class="form-group mt-2">
+                                  <input type="password" class="form-style" placeholder="Password" required>
+                                  <i class="input-icon uil uil-lock-alt"></i>
+                                </div>
+                                <a href="index.html" class="btn mt-4" id="sumbit">Login</a>
+                                <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot
+                                    your
+                                    password?</a></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-back">
+                            <div class="center-wrap">
+                              <div class="section text-center">
+                                <form>
+                                  <h4 class="mb-3 pb-3">SIGN UP</h4>
+                                  <div class="form-group">
+                                    <input type="text" class="form-style" placeholder="Full Name" name="name" required
+                                      pattern="[a-zA-Z ]+">
+                                    <i class="input-icon uil uil-user"></i>
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    <input type="tel" class="form-style" placeholder="Phone Number" name="phone" required
+                                      pattern="[0-9]{10}">
+                                    <i class="input-icon uil uil-phone"></i>
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    <input type="email" class="form-style" placeholder="Email" name="email" required
+                                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                    <i class="input-icon uil uil-at"></i>
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    <input type="password" class="form-style" placeholder="Password" name="pass" required
+                                      pattern=".{6,}">
+                                    <i class="input-icon uil uil-lock-alt"></i>
+                                  </div>
+                                  <button type="submit" class="btn mt-4 " name="send" id="sumbit">Register</button>
+                                </form>
+                              </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="close-btn" id="close-btn">&times;</div>
         </div>
+      
+      
+        <!-- LOGIN ENDS -->
+        <!-- Navbar End -->
+      
+<h1>Checkout Form</h1>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form >
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" >
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" >
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" >
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" >
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" >
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" >
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" >
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
     </div>
-    <script>
-        var valcode = document.querySelector("#discount")
-            var namecode = document.querySelector("#code")
-            namecode.textContent = valcode.value
+  </div>
+ 
+</div>
 
-            var closeBtn = document.querySelector(".close")
-            var couponCode = document.querySelector(".couponCode")
-            closeBtn.addEventListener("click", function () {
-                close()
-            })
-            valcode.addEventListener("change", function () {
-                checkDiscountCoupon()
-            })
+  <!-- start footer -->
+  <div class="container-fluid mt-3" id="footer-bg">
 
-            function checkDiscountCoupon() {
-                if (valcode.value.length === 0) {
-                    // namecode.style.display = "none"
-                    close()
-                }
-                else {
-                    couponCode.classList.remove("d-none")
-                    namecode.style.display = "inline"
-                    namecode.textContent = valcode.value
-                }
-            }
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 ml-0" id="footer-one">
+        <img class="footer-logo" src="assets/image/logo.png" alt="Footer">
+        <p class="footer-para mt-2" style="font-weight: bold;">A PET LOVER PARADISE</p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-two">
+        <img class="footer-img1" src="assets/image/blogimg4.png" alt="Footer">
+        <p class="footer-para mt-3">Cherish every moment with your pet and create cute memories that'll last a lifetime.
+        </p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-three">
+        <img src="assets/image/footer.png" alt="Footer" class="footer-img1">
+        <p class="footer-para">Remember to provide them with the care, attention, and love they deserve.</p>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="footer-four">
+        <span class="footer-connect ">Connect With Us Through: </span>
+        <section id="footersocial">
+          <a href="https://twitter.com/" target="_blank"><img src="assets/image/twitter.png" alt="twitter"
+              id="social-icon"></a>
+          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img
+              src="assets/image/google.png" alt="gmail" id="social-icon"></a>
+          <a href="https://pk.linkedin.com/" target="_blank" role="button"><img src="assets/image/linkedin.png"
+              alt="Linkedin" id="social-icon"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/instagram.png" alt="instagram"
+              id="social-icon"></a>
+        </section>
+        <h6 class="mt-2">Useful Links:</h6>
+        <p class="footer-links"><a href="index.html">Home</a><a href="category.html">Category</a> <a
+            href="blogs.html">Blogs</a><a href="contact.html">Contact</a></p>
+      </div>
+    </div>
 
-            function close() {
-                couponCode.classList.add("d-none")
-                valcode.value = ""
-            }
-            </script>
+  </div>
+  <!-- Footer End -->
+  
+  <!-- script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
+

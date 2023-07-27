@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/image/logo.png" alt="Yummy Pet Palate" class="
-                logo"></a>
+                    logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -34,18 +34,11 @@
             </button>
             <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item ">
-                        <div class="search ">
-                            <input type="search" placeholder="Type to search">
-                            <button>
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </li>
-
+                    
                     <li class="nav-item mt-1">
                         <button class="cart">
                             <i class="fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
+                            <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
                         </button>
                     </li>
                     <li class="nav-item mx-2 mt-1">
@@ -63,7 +56,8 @@
                             </div>
                             <ol id="nav" class="nav">
                                 <li><img src="assets/image/home.png" alt="home" class="icon"><a
-                                        href="index.html">Home</a></li>
+                                        href="index.html">Home</a>
+                                </li>
                                 <li><a href="category.html"><img src="assets/image/categories.png" alt="category"
                                             class="icon">Category</a></li>
                                 <li><a href="blogs.html"><img src="assets/image/blogger.png" alt="contact"
@@ -72,6 +66,7 @@
                                 <li><a href="contact.html"><img src="assets/image/telephone.png" alt="blog"
                                             class="icon">Contact</a>
                                 </li>
+
                             </ol>
                         </div>
                     </li>
@@ -81,6 +76,7 @@
         </div>
     </nav>
     <!-- navbar ends -->
+
     <!-- LOGIN STARTS -->
     <div class="overlay" id="overlay">
         <div class="overlay-content">
@@ -122,7 +118,7 @@
                                         <div class="card-back">
                                             <div class="center-wrap">
                                                 <div class="section text-center">
-                                                    <form action="register.php" method="post">
+                                                    <form>
                                                         <h4 class="mb-3 pb-3">SIGN UP</h4>
                                                         <div class="form-group">
                                                             <input type="text" class="form-style"
@@ -168,16 +164,19 @@
 
 
     <!-- LOGIN ENDS -->
-        <!-- Navbar End -->
-    <!-- start blog -->
+   
+    <!-- Navbar End --> <!-- start blog -->
     <!-- SECTION-ONE -->
     <div class="container-fluid mt-5 w-100" data-aos="zoom-in-out">
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <h1 class="blog">Care of your <br> little pets.🐬</h1>
-                <p class="blog-para">We believe finding a reliable,professional pet sitter should be <br> easy.So we
-                    make sure every member of our family.</p>
-                <button class="btn-ourservice"><a href="contact.html" style="text-decoration: none; color: black;">Our Service↗</a></button><button class="btn-call"><a href="tel:+111-222-999" style="text-decoration: none; color: black;">📞Schedule a call</a></button>
+                <h5 class="blog">Care of your <br> little pets.🐬</h1>
+                    <p class="blog-para">We believe finding a reliable,professional pet sitter should be <br> easy.So we
+                        make sure every member of our family.</p>
+                    <button class="btn-ourservice"><a href="contact.html"
+                            style="text-decoration: none; color: black;">Our Service↗</a></button><button
+                        class="btn-call"><a href="tel:+111-222-999"
+                            style="text-decoration: none; color: black;">📞Schedule a call</a></button>
             </div>
             <div class=" col-md-3 col-lg-3 col-xl-3">
                 <div class="row">
@@ -234,31 +233,36 @@
                 <img src="assets/image/dog2 catetory.jpg" alt="Wait until image loads.." class="blog-imgseven">
             </div>
             <div class="col-sm-8 col-md-8 col-lg 8 col-xl-8 mt-4">
-                <h1 class="howtoheading">
+                <h4 class="howtoheading">
                     How to take care of your pets
-                </h1>
-                <p class="howtopara">
-                    Pet care is essential for the well-being and happiness of our furry friends. Providing proper
-                    <br> care
-                    involves several key aspects. Firstly, nutrition plays a vital role in maintaining their
-                    health.<br> It is important to offer a balanced diet that meets their specific dietary requirements,
-                    whether
-                    <br>it's
-                    formulated pet food or a well-planned homemade diet. Regular feeding schedules an <br> appropriate
-                    portion control are necessary to prevent obesity or famished.
-                    At our pet shop, we <br> prioritize the health and well-being of your pets. We offer a wide range of
-                    high-quality pet <br> food
-                    options that cater to different dietary needs and preferences. Whether your pet requires <br>
-                    specialized nutrition or you
-                    prefer natural and organic options, we have you covered. Our <br> knowledgeable staff is always
-                    ready to
-                    assist you in
-                    choosing the right food for your pet's <br> specific requirements.exercise and physical activity are
-                    crucial for pets to stay fit and active. <br> Dogs, for instance, benefit from daily walks
-                    or playtime in a secure environment. Cats enjoy <br> interactive toys and vertical spaces to climb
-                    and explore. Regular exercise not only helps pets <br> burn off excess energy but also promotes
-                    mental stimulation and prevents behavioral issues.
-                </p>
+                    </h1>
+                    <p class="howtopara">
+                        Pet care is essential for the well-being and happiness of our furry friends. Providing proper
+                        <br> care
+                        involves several key aspects. Firstly, nutrition plays a vital role in maintaining their
+                        health.<br> It is important to offer a balanced diet that meets their specific dietary
+                        requirements,
+                        whether
+                        <br>it's
+                        formulated pet food or a well-planned homemade diet. Regular feeding schedules an <br>
+                        appropriate
+                        portion control are necessary to prevent obesity or famished.
+                        At our pet shop, we <br> prioritize the health and well-being of your pets. We offer a wide
+                        range of
+                        high-quality pet <br> food
+                        options that cater to different dietary needs and preferences. Whether your pet requires <br>
+                        specialized nutrition or you
+                        prefer natural and organic options, we have you covered. Our <br> knowledgeable staff is always
+                        ready to
+                        assist you in
+                        choosing the right food for your pet's <br> specific requirements.exercise and physical activity
+                        are
+                        crucial for pets to stay fit and active. <br> Dogs, for instance, benefit from daily walks
+                        or playtime in a secure environment. Cats enjoy <br> interactive toys and vertical spaces to
+                        climb
+                        and explore. Regular exercise not only helps pets <br> burn off excess energy but also promotes
+                        mental stimulation and prevents behavioral issues.
+                    </p>
             </div>
         </div>
     </div>
@@ -302,14 +306,15 @@
                 <img src="assets/image/blogdog.jpg" alt="Wait until image loads.." class="blog-imgeight">
             </div>
             <div class="col-sm-8 col-md-8 col-lg 8 col-xl-8 mt-5" data-aos="slide-up">
-                <h1 class="furryheading">
+                <h4 class="furryheading">
                     Your furry friend is in Safe Hand
-                </h1>
-                <p class="furrypara">
-                    As a team of experienced Pet owners and lovers, we really get to <br> know you and your pet trhough
-                    our one-on private walks and <br> we can quranteee consistent and personal care that is equal.💊
-                </p>
-                <h6 class="furrylink"><a href="contact.html">Read More ↗</a></h6>
+                    </h1>
+                    <p class="furrypara">
+                        As a team of experienced Pet owners and lovers, we really get to <br> know you and your pet
+                        trhough
+                        our one-on private walks and <br> we can quranteee consistent and personal care that is equal.💊
+                    </p>
+                    <h6 class="furrylink"><a href="contact.html">Read More ↗</a></h6>
             </div>
         </div>
     </div>

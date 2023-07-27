@@ -415,6 +415,13 @@ margin-right: 190px;
 }
 
 /* LOGIN  START*/
+#successMessage {
+    background-color: #c4ffc4;
+    padding: 10px;
+    border: 1px solid #a1eaa1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 .link {
     color: white;
 }
@@ -890,6 +897,7 @@ span {
     margin-right: 70px;
     border-radius: 20px;
     box-shadow: #90dc5d 2px 2px 2px 2px;
+        transition: transform 0.5s;
 }
 
 .grooming-para {
@@ -917,7 +925,79 @@ span {
     border-radius: 30px;
     margin-left: 50px;
 }
+.grooming-banner{
+    width: 100%;
+    height: 500px;
+}
+.dog-grooming{
+    width: 40px;
+    height: 40px;
+}
+.boarding{
+    font-family: pacifio;
+    color:palevioletred;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
 
+
+
+}
+
+.catspa-img{
+    width: 100%;
+    height: 450px;
+}
+.catspa-head{
+    font-family: pacifio;
+    text-align: center;
+}
+ul, li { list-style: none; }
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+.faq li
+ { padding: 25px;
+  border-radius: 20px;  
+ }
+
+.faq li.q {
+font-weight: bold;
+  font-size: 120%;
+  border: 1px #ddd solid;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.faq li.a {
+  background: #6edbff;
+  display: none;
+  color:black;
+}
+
+.faq li.q i {
+  float: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq li.q.rotate i::before {
+  content: "\f068"; /* Cross icon */
+}
+
+.faq li.q i::before {
+  content: "\f067"; /* Plus icon */
+}
+
+@media (max-width:800px) {
+  #container-faq { width: 90%; }
+}
 #vaccination {
     width: 180px;
     height: 160px;
@@ -925,6 +1005,7 @@ span {
     border-radius: 20px;
     margin-right: 70px;
     box-shadow: #9380ff 2px 2px 2px 2px;
+        transition: transform 0.5s;
 
 }
 
@@ -935,6 +1016,7 @@ span {
     border-radius: 20px;
     margin-right: 50px;
     box-shadow: 2px 2px 2px 2px palevioletred;
+        transition: transform 0.5s;
 }
 
 .food-img {
@@ -952,8 +1034,23 @@ span {
     border-radius: 20px;
     margin-left: 20px;
     box-shadow: 2px 2px 2px 2px #f1f159;
+    transition: transform 0.5s;
 }
+#medicine:hover{
 
+transform: translateY(-10px);
+}
+#grooming:hover {
+
+    transform: translateY(-10px);
+}
+#vaccination:hover {
+
+    transform: translateY(-10px);
+}
+#food:hover{
+transform: translateY(-10px);
+}
 .medicine-img {
     width: 30px;
     height: 30px;
@@ -996,7 +1093,6 @@ span {
     margin-left: 50px;
 }
 
-/* Responsive Styles */
 
 /* Small devices (phones, up to 576px) */
 @media (max-width: 576px) {
@@ -1208,7 +1304,7 @@ span {
 
 .bestfriend-img {
     width: 100%;
-    height: 300px;
+    height: 400px;
 
 }
 
@@ -1216,6 +1312,13 @@ span {
 /* HOME BANNER END */
 /* CATEGORY PAGE  */
 /* CATEGORY BANNER STARTS*/
+
+.categorybanner{
+    width: 100%;
+    height: 600px;
+}
+
+
 .category-heading {
     color: rgb(203, 64, 110);
     margin-left: 50px;
@@ -1437,6 +1540,10 @@ span {
         font-size: 20px;
     }
 
+    .categorybanner{
+        width: 400px;
+    height: 300px;
+}
     .category-btn {
         background-color: rgb(203, 64, 110);
         margin-top: 10px;
@@ -1735,7 +1842,7 @@ justify-content: center;
         height: 150px;
         position: absolute;
         left: 210px;
-        top: 435px;
+        top: 826px;
 
     }
 
@@ -1744,10 +1851,12 @@ justify-content: center;
         height: 150px;
         position: absolute;
         left: 210px;
-        top: 635px;
+        top: 626px;
 
     }
-
+.categorybanner{
+    width: 700px;
+height: 300px;}
     #sale-card {
         margin-left: 30px;
         width: 330px;
@@ -1833,7 +1942,28 @@ justify-content: center;
     }
 
 }
+@media screen and (min-width:120px) and (max-width:240px){
 
+    .sale-img {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 210px;
+        top: 856px;
+
+    }
+
+    .sale-img-2 {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 210px;
+        top: 656px;
+
+    }
+
+
+}
 /*CAT CATEGORY CARDS */ 
 
 /* shop cart */
@@ -1860,55 +1990,6 @@ justify-content: center;
 
 
 /* CAT CATEGORY END */
-/* GIF */
-.walking-cat {
-    position: absolute;
-    top: 10px;
-    left: 60px;
-    width: 200px;
-    animation: walking-animation 1s steps(8) infinite;
-}
-
-@keyframes walking-animation {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -1600px 0;
-    }
-}
-
-.catdog-gif {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 500px;
-    right: -100%;
-    animation: moveAnimation 15s infinite;
-}
-
-@keyframes moveAnimation {
-    0% {
-        right: -100%;
-    }
-
-    25% {
-        right: 25%;
-    }
-
-    50% {
-        right: 50%;
-    }
-
-    75% {
-        right: 75%;
-    }
-
-    100% {
-        right: 100%;
-    }
-}
 
 /* CATEGORY END */
 
@@ -2245,7 +2326,6 @@ justify-content: center;
 
 @media (min-width: 768px) and (max-width:991px) {
 
-    /* Styles for small screens */
     .map iframe {
 
         height: 350px;
@@ -3350,13 +3430,13 @@ span i {
     }
 
     .client-single.position-4 {
-        left: 40px;
+        left: -20px;
         top: 270px;
     }
 
     .client-single.position-5 {
         top: 40px;
-        right: 40px;
+        right: -20px;
     }
 
     .client-single.position-6 {
