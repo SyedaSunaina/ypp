@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO products (name, price, category, filter, image) VALUES (?, ?, ?, ?, ?)";
         $stmt = $con->prepare($query);
         $stmt->bind_param("sssss", $name, $price, $category, $subcategory, $image);
-
+        
         $upload = move_uploaded_file($tmp_image, $folder);
 
         if ($stmt->execute() && $upload) {
