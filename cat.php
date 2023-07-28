@@ -253,8 +253,8 @@ function changeQuantity(key, quantity){
               id="social-icon"></a>
         </section>
         <h6 class="mt-2">Useful Links:</h6>
-        <p class="footer-links"><a href="index.html">Home</a><a href="category.html">Category</a> <a
-            href="blogs.html">Blogs</a><a href="contact.html">Contact</a></p>
+        <p class="footer-links"><a href="index.php">Home</a><a href="category.php">Category</a> <a
+            href="blogs.php">Blogs</a><a href="contact.php">Contact</a></p>
       </div>
     </div>
   
