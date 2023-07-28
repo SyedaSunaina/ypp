@@ -251,9 +251,16 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
+
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
     body.classList.add('active');
-})
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })

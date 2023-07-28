@@ -5,8 +5,8 @@ if ($con->connect_error) {
     die('Connection failed: ' . $con->connect_error);
 }
 
-// Step 2: Fetch data from the database with category "cat"
-$query = "SELECT * FROM products WHERE category = 'cat'";
+// Step 2: Fetch data from the database with category "dog"
+$query = "SELECT * FROM products WHERE category = 'dog'";
 $result = $con->query($query);
 
 // Step 3: Fetch products into products array
@@ -17,14 +17,12 @@ if ($result->num_rows > 0) {
     }
    // echo json_encode($products);
 } else {
-   // echo json_encode(array('message' => 'No products found in the "cat" category.'));
+   // echo json_encode(array('message' => 'No products found in the "dog" category.'));
 }
 
 // Close the database connection
 //$con->close();
 ?>
-
-
 
 
 
@@ -36,9 +34,11 @@ if ($result->num_rows > 0) {
 <body style="background-color: rgb(243, 155, 184) ;">
   <?php include('nav.php'); ?>
 
-  <!-- Dog category start -->
-  <h1 class="cat-heading">"CAT CATEGORY"🐾</h1>
-  <!-- filter -->
+  
+
+  <!-- cat category start -->
+    <h1 class="cat-heading">"DOG CATEGORY"🍗</h1>
+    <!-- filter -->
   <div class="container">
     <div class="row">
       <div class="col-2">
@@ -51,27 +51,31 @@ if ($result->num_rows > 0) {
           <option value="accessory">Accessories</option>
           <option value="medicine">Medicines</option>
         </select>
-      </div>
+        </div>
     </div>
   </div>
-  <!-- cart -->
-  <div class="container">
-    <div class="list">
-    </div>
+
+
+<!-- cart -->
+<div class="container">
+  <div class="list">
   </div>
-  <div class="card">
-    <h1>Cart</h1>
-    <ul class="listCard">
-    </ul>
+</div>
+<div class="card">
+  <h1>Cart</h1>
+  <ul class="listCard">
+  </ul>
 
-    <div class="checkOut">
+  <div class="checkOut">
 
-      <div class="total">0</div>
-      <div class="checkout"><a href="checkout.php" style="text-decoration: none; color: white;">Checkout</a></div>
+    <div class="total">0</div>
+    <div class="checkout"><a href="checkout.php" style="text-decoration: none; color: white;">Checkout</a></div>
 
-    </div>
-    <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
   </div>
+  <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
+</div>
+
+
   <!-- start footer -->
   <div class="container-fluid mt-3" id="footer-bg">
   
@@ -116,6 +120,7 @@ if ($result->num_rows > 0) {
 
 
 
+
 <!-- script -->
 <script>
   
@@ -146,7 +151,6 @@ let products = <?php echo json_encode($products); $con->close(); ?>;
 let listCards  = [];
 
 //LOAD ALL PRODUCTS ON PAGE LOAD
-
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
@@ -174,8 +178,7 @@ function initApp(){
 }
 initApp();
 
-//LOAD PRODUCTS ACCORDING TO SELECTED FILTER
-
+//LOAD PRODUCTS ACCORDING SELECTED FILTER
 function filterItems(filter) {
     list.innerHTML = ''; // Clear the existing items in the list
     products.forEach((value, key) => {

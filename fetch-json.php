@@ -6,7 +6,7 @@ if ($con->connect_error) {
 }
 
 // Step 2: Fetch data from the database with category "cat"
-$query = "SELECT * FROM products WHERE category = 'cat'";
+$query = "SELECT * FROM products";
 $result = $con->query($query);
 
 // Step 3: Convert data to JSON
@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
     }
     echo json_encode($products);
 } else {
-    echo json_encode(array('message' => 'No products found in the "cat" category.'));
+    echo json_encode(array('message' => 'No products found.'));
 }
 
 // Close the database connection
