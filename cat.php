@@ -54,24 +54,7 @@ if ($result->num_rows > 0) {
       </div>
     </div>
   </div>
-  <!-- cart -->
-  <div class="container">
-    <div class="list">
-    </div>
-  </div>
-  <div class="card">
-    <h1>Cart</h1>
-    <ul class="listCard">
-    </ul>
-
-    <div class="checkOut">
-
-      <div class="total">0</div>
-      <div class="checkout"><a href="checkout.php" style="text-decoration: none; color: white;">Checkout</a></div>
-
-    </div>
-    <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
-  </div>
+ <?php include('cart.php'); ?>
   <!-- start footer -->
   <div class="container-fluid mt-3" id="footer-bg">
   
@@ -138,9 +121,11 @@ if (openShopping) {
 /*openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })*/
-closeShopping.addEventListener('click', ()=>{
+if(closeShopping) {
+  closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
-})
+  });
+}
 
 let products = <?php echo json_encode($products); $con->close(); ?>;
 let listCards  = [];
@@ -168,7 +153,7 @@ function initApp(){
        <button onclick="addToCard(${key})">Add To Cart</button>
     </div>  
   </div>  
-</div>  `
+</div>`;
         list.appendChild(newDiv);
     })
 }

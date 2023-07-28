@@ -7,6 +7,7 @@ include("header.php");
 <body style="background-color:  rgb(198, 242, 248);">
 <?php
 include("nav.php");
+include("cart.php");
 ?>
     <!-- banner starts -->
     <div class="container-fluid">
@@ -167,6 +168,32 @@ include("nav.php");
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+        // cart
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
+if(closeShopping) {
+  closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+  });
+}
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
