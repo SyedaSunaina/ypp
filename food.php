@@ -1,3 +1,29 @@
+<?php
+// Step 1: Database connection
+$con = new mysqli('localhost', 'root', '', 'ypp');
+if ($con->connect_error) {
+    die('Connection failed: ' . $con->connect_error);
+}
+
+// Step 2: Fetch data from the database with category "cat"
+$query = "SELECT * FROM products WHERE filter = 'food'";
+$result = $con->query($query);
+
+// Step 3: Fetch products into products array
+if ($result->num_rows > 0) {
+    $products = array();
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+   // echo json_encode($products);
+} else {
+   // echo json_encode(array('message' => 'No products found in the "cat" category.'));
+}
+
+// Close the database connection
+//$con->close();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,29 +35,12 @@ include("header.php");
   include("nav.php");
   ?>
 
-
   <!-- cat category start -->
   <h1 class="cat-heading">"FOOD"</h1>
 
-  <!-- cart -->
-  <div class="container">
-    <div class="list">
-    </div>
-  </div>
-  <div class="card">
-    <h1>Cart</h1>
-    <ul class="listCard">
-    </ul>
-
-    <div class="checkOut">
-
-      <div class="total">0</div>
-      <div class="checkout"><a href="checkout.php" style="text-decoration: none; color: white;">Checkout</a></div>
-
-    </div>
-    <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
-  </div>
-
+  <?php
+  include("cart.php");
+  ?>
 
 
 
@@ -40,208 +49,32 @@ include("header.php");
   <script>
 
     // cart
-    let openShopping = document.querySelector('.shopping');
-    let closeShopping = document.querySelector('.closeShopping');
-    let list = document.querySelector('.list');
-    let listCard = document.querySelector('.listCard');
-    let body = document.querySelector('body');
-    let total = document.querySelector('.total');
-    let quantity = document.querySelector('.quantity');
-
-    openShopping.addEventListener('click', () => {
-      body.classList.add('active');
-    })
-    closeShopping.addEventListener('click', () => {
-      body.classList.remove('active');
-    })
-
-    let products = [
-      {
-        id: 1,
-        name: 'Whiskas',
-        image: 'catfood1.png',
-        price: 2200,
-        filter: 'food'
-      },
-      {
-        id: 2,
-        name: 'Me-O',
-        image: 'catfood8.png',
-        price: 1800,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 3,
-        name: 'Josera',
-        image: 'catfood3.png',
-        price: 4000,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 4,
-        name: 'Meaoon',
-        image: 'catfood4.png',
-        price: 2600,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 5,
-        name: 'Reflex',
-        image: 'catfood5.png',
-        price: 3100,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 6,
-        name: 'Kitty Kat',
-        image: 'catfood6.png',
-        price: 2300,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 7,
-        name: 'Whiskas Jelly',
-        image: 'jelly1.png',
-        price: 500,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 8,
-        name: 'Felix',
-        image: 'jelly2.png',
-        price: 550,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 9,
-        name: 'Brit',
-        image: 'jelly3.png',
-        price: 650,
-        filter: 'food'
-      },
-      {
-        id: 10,
-        name: 'Royal Canin',
-        image: 'jelly4.png',
-        price: 450,
-        filter: 'food'
-      },
-      {
-        id: 11,
-        name: 'Applaws',
-        image: 'jelly5.png',
-        price: 800,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 12,
-        name: 'Josera Jelly',
-        image: 'jelly6.png',
-        price: 300,
-        filter: 'food'
-      }, {
-        id: 13,
-        name: 'Ultra',
-        image: 'food01.png',
-        price: 2200,
-        filter: 'food'
-      },
-      {
-        id: 14,
-        name: 'Pedigree',
-        image: 'food2.png',
-        price: 1800,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 15,
-        name: 'Hypro',
-        image: 'food3.png',
-        price: 4000,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 16,
-        name: 'Woof',
-        image: 'food4.png',
-        price: 2600,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 17,
-        name: 'Puppy paw',
-        image: 'food5.png',
-        price: 3100,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 18,
-        name: 'Pedigree',
-        image: 'food6.png',
-        price: 2300,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 19,
-        name: 'Pedigree',
-        image: 'dogjelly1.png',
-        price: 500,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 20,
-        name: 'Husky',
-        image: 'dogjelly02.png',
-        price: 550,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 21,
-        name: 'Bona Cibo',
-        image: 'dogjelly3.png',
-        price: 650,
-        filter: 'food'
-      },
-      {
-        id: 22,
-        name: 'Winalot',
-        image: 'dogjelly4.png',
-        price: 450,
-        filter: 'food'
-      },
-      {
-        id: 23,
-        name: 'Whiskas',
-        image: 'dogjelly5.png',
-        price: 800,
-        filter: 'food'
-      }
-      ,
-      {
-        id: 24,
-        name: 'Cesar',
-        image: 'dogjelly6.png',
-        price: 300,
-        filter: 'food'
-      },
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
 
 
-    ];
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
+if(closeShopping) {
+  closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+  });
+}
+
+   let products = <?php echo json_encode($products); $con->close(); ?>;
+   
     let listCards = [];
     function initApp() {
       products.forEach((value, key) => {
@@ -310,62 +143,7 @@ include("header.php");
       }
       reloadCard();
     }
-    function filterItems(filter) {
-      list.innerHTML = ''; // Clear the existing items in the list
-
-      products.forEach((value, key) => {
-        if (value.filter === filter) {
-          let newDiv = document.createElement('div');
-          newDiv.classList.add('item');
-          newDiv.innerHTML = `
-        <div class= "container">
-          <div class= "row">
-        <div class = "card">
-      <div class = "image">
-        <img src="assets/image/${value.image}">
-      </div>
-      <div class = "content">
-       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
-       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <button onclick="addToCard(${key})">Add To Cart</button>
-    </div> 
-  </div> 
-  </div>  
-</div>  `
-          list.appendChild(newDiv);
-        }
-      });
-      products.forEach((value, key) => {
-        if (filter === 'All' || value.filter === filter) {
-          let newDiv = document.createElement('div');
-          newDiv.classList.add('item');
-          newDiv.innerHTML = `
-      <div class= "container">
-          <div class="row">
-        <div class = "card">
-      <div class = "image">
-        <img src="assets/image/${value.image}">
-      </div>
-      <div class = "content">
-       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
-       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <button onclick="addToCard(${key})">Add To Cart</button>
-    </div>  
-  </div>  
-</div>
-</div>`;
-          list.appendChild(newDiv);
-        }
-      });
-    }
+    
   // CARDS END
   </script>
   <!-- script -->

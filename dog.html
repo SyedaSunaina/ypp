@@ -186,7 +186,7 @@
 
   <div class="checkOut">
 
-    <div class="total">0</div>
+    <div class="total"></div>
     <div class="checkout"><a href="checkout.html" style="text-decoration: none; color: white;">Checkout</a></div>
 
   </div>
@@ -270,14 +270,14 @@ let products = [
         id: 1,
         name: 'Ultra',
         image: 'food01.png',
-        price: 2200,
+        price: '2200',
         filter:'food'
     },
     {
       id: 2,
       name: 'Pedigree',
       image: 'food2.png',
-      price: 1800,
+      price: '1800',
       filter:'food'
   }
   ,
@@ -500,7 +500,7 @@ function initApp(){
       </div>
       <div class = "content">
        <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
-       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
+       <h4 style="font-family: pacifio;" class="price">${value.price}</h4>
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
@@ -524,9 +524,9 @@ function addToCard(key){
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
-    let totalPrice = 0;
+    let totalPrice = Number();
     listCards.forEach((value, key)=>{
-        totalPrice = totalPrice + value.price;
+        totalPrice = totalPrice + Number(value.price);
         count = count + value.quantity;
         if(value != null){
             let newDiv = document.createElement('li');
@@ -550,7 +550,7 @@ function changeQuantity(key, quantity){
         delete listCards[key];
     }else{
         listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[key].price = quantity * products[key].price.toLocaleString();
     }
     reloadCard();
   }

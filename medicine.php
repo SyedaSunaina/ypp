@@ -1,161 +1,80 @@
+<?php
+// Step 1: Database connection
+$con = new mysqli('localhost', 'root', '', 'ypp');
+if ($con->connect_error) {
+    die('Connection failed: ' . $con->connect_error);
+}
+
+// Step 2: Fetch data from the database with category "cat"
+$query = "SELECT * FROM products WHERE filter = 'medicine'";
+$result = $con->query($query);
+
+// Step 3: Fetch products into products array
+if ($result->num_rows > 0) {
+    $products = array();
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+   // echo json_encode($products);
+} else {
+   // echo json_encode(array('message' => 'No products found in the "cat" category.'));
+}
+
+// Close the database connection
+//$con->close();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <?php
 include("header.php");
 ?>
-
 <body style="background-color: rgb(243, 155, 184) ;">
   <?php
   include("nav.php");
   ?>
+
+  <!-- cat category start -->
   <h1 class="cat-heading">"MEDICINES"</h1>
-  <!-- cart -->
-  <div class="container">
-    <div class="list">
-    </div>
-  </div>
-  <div class="card">
-    <h1>Cart</h1>
-    <ul class="listCard">
-    </ul>
 
-    <div class="checkOut">
+  <?php
+  include("cart.php");
+  ?>
 
-      <div class="total">0</div>
-      <div class="checkout"><a href="checkout.php" style="text-decoration: none; color: white;">Checkout</a></div>
 
-    </div>
-    <i class="fa-regular fa-circle-xmark closeShopping" style="color: #000000;"></i>
-  </div>
+
 
   <!-- CARDS STARTS -->
   <script>
 
     // cart
-    let openShopping = document.querySelector('.shopping');
-    let closeShopping = document.querySelector('.closeShopping');
-    let list = document.querySelector('.list');
-    let listCard = document.querySelector('.listCard');
-    let body = document.querySelector('body');
-    let total = document.querySelector('.total');
-    let quantity = document.querySelector('.quantity');
-
-    openShopping.addEventListener('click', () => {
-      body.classList.add('active');
-    })
-    closeShopping.addEventListener('click', () => {
-      body.classList.remove('active');
-    })
-
-    let products = [
-      {
-        id: 1,
-        name: 'Bravecto',
-        image: 'dmed1.png',
-        price: 1000,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 2,
-        name: 'Vomitol',
-        image: 'dmed02.png',
-        price: 1200,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 3,
-        name: 'Digyton',
-        image: 'dmed3.png',
-        price: 900,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 4,
-        name: 'Dfender Plus',
-        image: 'dmed4.png',
-        price: 1550,
-        filter: 'medicines'
-      }
-      ,
-      {
-        id: 5,
-        name: 'Simparica TRIO',
-        image: 'dmed5.png',
-        price: 650,
-        filter: 'medicines'
-      }
-      ,
-      {
-        id: 6,
-        name: 'Allergy Immune Trears',
-        image: 'dmed6.png',
-        price: 800,
-        filter: 'medicines'
-
-      }
-      ,
-      {
-        id: 7,
-        name: 'Gim Cat',
-        image: 'med1.png',
-        price: 1000,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 8,
-        name: 'Quantum',
-        image: 'med2.png',
-        price: 1200,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 9,
-        name: 'Tape Tabs',
-        image: 'med3.png',
-        price: 900,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 10,
-        name: 'Shampoo',
-        image: 'med4.png',
-        price: 1550,
-        filter: 'medicines'
-      }
-      ,
-      {
-        id: 11,
-        name: 'Drontal',
-        image: 'med5.png',
-        price: 650,
-        filter: 'medicines'
-      }
-
-      ,
-      {
-        id: 12,
-        name: 'Cat Star',
-        image: 'med6.png',
-        price: 800,
-        filter: 'medicines'
-
-      }
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
 
 
-    ];
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
+if(closeShopping) {
+  closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+  });
+}
+
+   let products = <?php echo json_encode($products); $con->close(); ?>;
+   
     let listCards = [];
     function initApp() {
       products.forEach((value, key) => {
@@ -224,62 +143,7 @@ include("header.php");
       }
       reloadCard();
     }
-    function filterItems(filter) {
-      list.innerHTML = ''; // Clear the existing items in the list
-
-      products.forEach((value, key) => {
-        if (value.filter === filter) {
-          let newDiv = document.createElement('div');
-          newDiv.classList.add('item');
-          newDiv.innerHTML = `
-        <div class= "container">
-          <div class= "row">
-        <div class = "card">
-      <div class = "image">
-        <img src="assets/image/${value.image}">
-      </div>
-      <div class = "content">
-       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
-       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <button onclick="addToCard(${key})">Add To Cart</button>
-    </div> 
-  </div> 
-  </div>  
-</div>  `
-          list.appendChild(newDiv);
-        }
-      });
-      products.forEach((value, key) => {
-        if (filter === 'All' || value.filter === filter) {
-          let newDiv = document.createElement('div');
-          newDiv.classList.add('item');
-          newDiv.innerHTML = `
-      <div class= "container">
-          <div class="row">
-        <div class = "card">
-      <div class = "image">
-        <img src="assets/image/${value.image}">
-      </div>
-      <div class = "content">
-       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
-       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <button onclick="addToCard(${key})">Add To Cart</button>
-    </div>  
-  </div>  
-</div>
-</div>`;
-          list.appendChild(newDiv);
-        }
-      });
-    }
+    
   // CARDS END
   </script>
   <!-- script -->

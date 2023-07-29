@@ -154,7 +154,7 @@ function initApp(){
        <button onclick="addToCard(${key})">Add To Cart</button>
     </div>  
   </div>  
-</div>  `
+</div>`
         list.appendChild(newDiv);
     })
 }
@@ -168,26 +168,29 @@ function filterItems(filter) {
     let newDiv = document.createElement('div');
     newDiv.classList.add('item');
     newDiv.innerHTML = `
-      <div class="card">
-        <div class="image">
-          <img src="assets/image/${value.image}">
-        </div>
-        <div class="content">
-          <h2 style="font-family: pacifico;" class="title">${value.name}</h2>
-          <h4 style="font-family: pacifico;" class="price">${value.price.toLocaleString()}</h4>
-          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-          <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-          <button onclick="addToCard(${key})">Add To Cart</button>
-        </div>
-      </div>`;
+        <div class= "container">
+          <div class="row">
+        <div class = "card">
+      <div class = "image">
+        <img src="assets/image/${value.image}">
+      </div>
+      <div class = "content">
+       <h2 style="font-family: pacifio;" class="title"> ${value.name}</h2>
+       <h4 style="font-family: pacifio;" class="price">${value.price.toLocaleString()}</h4>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <i class="fa-solid fa-star" style="color: #ebe424;"></i>
+       <button onclick="addToCard(${key})">Add To Cart</button>
+    </div>  
+  </div>  
+</div>`
     list.appendChild(newDiv);
   }
 });
 
   }
-function addToCard(key){
+  function addToCard(key){
     if(listCards[key] == null){
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
@@ -198,9 +201,9 @@ function addToCard(key){
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
-    let totalPrice = 0;
+    let totalPrice = Number();
     listCards.forEach((value, key)=>{
-        totalPrice = totalPrice + value.price;
+        totalPrice = totalPrice + Number(value.price);
         count = count + value.quantity;
         if(value != null){
             let newDiv = document.createElement('li');
@@ -224,7 +227,7 @@ function changeQuantity(key, quantity){
         delete listCards[key];
     }else{
         listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[key].price = quantity * products[key].price.toLocaleString();
     }
     reloadCard();
   }

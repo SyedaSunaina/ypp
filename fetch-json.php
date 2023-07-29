@@ -6,7 +6,7 @@ if ($con->connect_error) {
 }
 
 // Step 2: Fetch data from the database with category "cat"
-$query = "SELECT * FROM products";
+$query = "SELECT * FROM products WHERE filter = 'food'";
 $result = $con->query($query);
 
 // Step 3: Convert data to JSON

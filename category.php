@@ -40,7 +40,7 @@ include("header.php");
             <img src="assets/image/bananacat.jpg" alt="Avatar" class="flip-card-img">
           </div>
           <div class="flip-card-back">
-            <h1 style="margin-top: 40px;"><a href="dog.html" style="text-decoration: none; color: black;">Dog</a></h1>
+            <h1 style="margin-top: 40px;"><a href="dog.php" style="text-decoration: none; color: black;">Dog</a></h1>
 
           </div>
         </div>
@@ -61,7 +61,7 @@ include("header.php");
 
             <p class="sale-subheading">Save up to 50% all products</p>
 
-            <button class="sale-btn"><a href="dog.html" style="text-decoration: none; color: black;">Shop
+            <button class="sale-btn"><a href="dog.php" style="text-decoration: none; color: black;">Shop
                 Now</a></button>
           </div>
           <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">

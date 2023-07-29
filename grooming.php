@@ -2,171 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummy Pet Palate</title>
-    <link rel="icon" href="assets/image/logo.png">
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-    <link rel="stylesheet" href="assets/login.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-
-</head>
-
+<?php
+include("header.php");
+?>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" alt="Yummy Pet Palate" class="
-                    logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto ">
-                   
-
-                    <li class="nav-item mt-1">
-                        <button class="cart">
-                            <i class="fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
-                            <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item mx-2 mt-1">
-                        <button class="icon-login" id="user-btn">
-                            <i class="fa-solid fa-user-plus fa-lg" style="color: #c187d1;"></i>
-                        </button>
-
-                    </li>
-                    <li class="nav-item ">
-                        <div id="navigation">
-                            <div id="menu" onclick="onclickmenu()">
-                                <div id="bar1" class="bar"></div>
-                                <div id="bar2" class="bar"></div>
-                                <div id="bar3" class="bar"></div>
-                            </div>
-                            <ol id="nav" class="nav">
-                                <li><img src="assets/image/home.png" alt="home" class="icon"><a
-                                        href="index.html">Home</a>
-                                </li>
-                                <li><a href="category.html"><img src="assets/image/categories.png" alt="category"
-                                            class="icon">Category</a></li>
-                                <li><a href="blogs.html"><img src="assets/image/blogger.png" alt="contact"
-                                            class="icon">Blogs</a>
-                                </li>
-                                <li><a href="contact.html"><img src="assets/image/telephone.png" alt="blog"
-                                            class="icon">Contact</a>
-                                </li>
-
-                            </ol>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-    <!-- navbar ends -->
-
-    <!-- LOGIN STARTS -->
-    <div class="overlay" id="overlay">
-        <div class="overlay-content">
-            <div class="section">
-                <div class="container">
-                    <div class="row full-height justify-content-center">
-                        <div class="col-12 text-center align-self-center py-5">
-                            <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                                <h6 class="mb-0 pb-3"><span class="login">LOG IN</span><span class="login">SIGN
-                                        UP</span>
-                                </h6>
-                                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
-                                <label for="reg-log"></label>
-                                <div class="card-3d-wrap mx-auto">
-                                    <div class="card-3d-wrapper">
-                                        <div class="card-front">
-                                            <div class="center-wrap">
-                                                <div class="section text-center">
-                                                    <h4 class="mb-4 pb-3">LOG IN
-                                                    </h4>
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-style" placeholder="Email"
-                                                            required
-                                                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-                                                        <i class="input-icon uil uil-at"></i>
-                                                    </div>
-                                                    <div class="form-group mt-2">
-                                                        <input type="password" class="form-style" placeholder="Password"
-                                                            required>
-                                                        <i class="input-icon uil uil-lock-alt"></i>
-                                                    </div>
-                                                    <a href="index.html" class="btn mt-4" id="sumbit">Login</a>
-                                                    <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot
-                                                            your
-                                                            password?</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-back">
-                                            <div class="center-wrap">
-                                                <div class="section text-center">
-                                                    <form>
-                                                        <h4 class="mb-3 pb-3">SIGN UP</h4>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-style"
-                                                                placeholder="Full Name" name="name" required
-                                                                pattern="[a-zA-Z ]+">
-                                                            <i class="input-icon uil uil-user"></i>
-                                                        </div>
-                                                        <div class="form-group mt-2">
-                                                            <input type="tel" class="form-style"
-                                                                placeholder="Phone Number" name="phone" required
-                                                                pattern="[0-9]{10}">
-                                                            <i class="input-icon uil uil-phone"></i>
-                                                        </div>
-                                                        <div class="form-group mt-2">
-                                                            <input type="email" class="form-style" placeholder="Email"
-                                                                name="email" required
-                                                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-                                                            <i class="input-icon uil uil-at"></i>
-                                                        </div>
-                                                        <div class="form-group mt-2">
-                                                            <input type="password" class="form-style"
-                                                                placeholder="Password" name="pass" required
-                                                                pattern=".{6,}">
-                                                            <i class="input-icon uil uil-lock-alt"></i>
-                                                        </div>
-                                                        <button type="submit" class="btn mt-4 " name="send"
-                                                            id="sumbit">Register</button>
-                                                    </form>
-                                                </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="close-btn" id="close-btn">&times;</div>
-    </div>
+<?php
+include("nav.php");
+include("cart.php");
+?>
 
 
-    <!-- LOGIN ENDS -->
-    <!-- Navbar End -->
+
+    
     <!-- GROOMING STARTS -->
 
     <img src="assets/image/groomingbanner.png" alt="" class="grooming-banner">
@@ -289,26 +136,43 @@
                             alt="instagram" id="social-icon"></a>
                 </section>
                 <h6 class="mt-2">Useful Links:</h6>
-                <p class="footer-links"><a href="index.html">Home</a><a href="category.html">Category</a> <a
-                        href="blogs.html">Blogs</a><a href="contact.html">Contact</a></p>
+                <p class="footer-links"><a href="index.php">Home</a><a href="category.php">Category</a> <a
+                        href="blogs.php">Blogs</a><a href="contact.php">Contact</a></p>
             </div>
         </div>
 
     </div>
     <!-- Footer End -->
 
-
-
-
-
-
-
-
-
     <!-- script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+         // cart
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+
+if (openShopping) {
+  openShopping.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+}
+
+/*openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})*/
+if(closeShopping) {
+  closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+  });
+}
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
