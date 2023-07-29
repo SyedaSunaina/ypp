@@ -4,13 +4,15 @@
     <title>All Products</title>
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">All Products</h1>
+        <h1 class="text-center">All Products</h1> 
+        <div style="float: right; padding: 10px;" class="addnewbtn"><a href="add-product.php" target="_blank" class="btn btn-primary">+ Add New Product</a></div>
         <table class="table">
             <thead>
-                <tr>
+                <tr> 
                     <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>

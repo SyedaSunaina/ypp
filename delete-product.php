@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->close();
         $con->close();
     } else {
-        // Product ID not provided, handle the error or redirect to index.php
+        // Product ID not provided, handle the error or redirect to all-products.php
         echo '<script>alert("Product ID not provided.");</script>';
     }
 }
