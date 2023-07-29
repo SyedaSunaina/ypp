@@ -80,7 +80,7 @@ include("header.php");
       <!--<div id="form-overlay" class="form-overlay">
         <div class="overlay-content">
           <button class="close-button">&times;</button>
-          <h3 class="sub-heading"><?php echo $sent; ?></h3><br>
+          <h3 class="sub-heading"></h3><br>
           <h3 class="sub-heading">Submitted Information:</h3>
           <p id="submittedFirstName"></p>
           <p id="submittedLastName"></p>
