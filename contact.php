@@ -92,7 +92,7 @@ include("header.php");
       </div>-->
       <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
         <div class="form-bg">
-          <form id="myForm" method="POST" action="contact.php">
+          <form id="myForm" method="POST">
 
             <div class="row">
               <div class="col-md-6 mt-3 ">
