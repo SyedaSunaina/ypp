@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   
 });
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('myForm');
   const formOverlay = document.getElementById('form-overlay');
   const overlayContent = formOverlay.querySelector('.overlay-content');
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('emailAddress').value;
-    const gender = document.querySelector('input[name="inlineRadioOptions"]:checked').nextElementSibling.textContent;
+    const gender = document.querySelector('input[name="gender"]:checked').nextElementSibling.textContent;
     const birthday = document.getElementById('birthdayDate').value;
     const phoneNumber = document.getElementById('phoneNumber').value;
 
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
       formOverlay.style.display = 'none'; // Hide the form overlay when clicked outside the content
     }
   });
-});
+});*/
 
 // shop cart
 document.getElementById("submit").addEventListener("click", function () {

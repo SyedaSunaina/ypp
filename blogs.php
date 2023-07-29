@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include("connection.php");
 include("header.php");
 ?>
 <body style="background-color: rgb(198, 242, 248) ;">

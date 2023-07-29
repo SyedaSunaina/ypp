@@ -1,14 +1,12 @@
 <?php
+include("connection.php");
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if the product ID is provided
     if (isset($_POST['id'])) {
         $product_id = $_POST['id'];
 
-        // Database connection
-        $con = new mysqli('localhost', 'root', '', 'ypp');
-        if ($con->connect_error) {
-            die('Connection failed: ' . $con->connect_error);
-        }
+        
 
         // Prepare and execute the DELETE query
         $query = "DELETE FROM products WHERE id=?";

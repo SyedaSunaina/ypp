@@ -1,3 +1,33 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  include("connection.php");
+
+  if (isset($_POST['submit'])) {
+      $fname = $_POST['first_name'];
+      $lname = $_POST['last_name'];
+      $email = $_POST['email'];
+      $gender = $_POST['gender'];
+      $msg = $_POST['msg'];
+      $num = $_POST['num'];
+      $dt = date("Y-m-d h:i:sa");
+      
+      $query = "INSERT INTO contact (F_Name, L_Name, Email, Gender, Msg, Num, Time_Date) VALUES (?, ?, ?, ?, ?, ?, ?)";
+      $stmt = $con->prepare($query);
+      $stmt->bind_param("sssssss", $fname, $lname, $email, $gender, $msg, $num, $dt);
+      
+    if ($stmt->execute()) {
+        $sent = 'Mail Sent Successfully.';
+      } else {
+        $sent = 'FAILED.';
+      }
+
+      $stmt->close();
+  }
+
+  $con->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,9 +77,10 @@ include("header.php");
         </ul>
       </div>
       <!-- FORM -->
-      <div id="form-overlay" class="form-overlay">
+      <!--<div id="form-overlay" class="form-overlay">
         <div class="overlay-content">
           <button class="close-button">&times;</button>
+          <h3 class="sub-heading"><?php echo $sent; ?></h3><br>
           <h3 class="sub-heading">Submitted Information:</h3>
           <p id="submittedFirstName"></p>
           <p id="submittedLastName"></p>
@@ -58,16 +89,16 @@ include("header.php");
           <p id="submittedBirthday"></p>
           <p id="submittedPhoneNumber"></p>
         </div>
-      </div>
+      </div>-->
       <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
         <div class="form-bg">
-          <form id="myForm">
+          <form id="myForm" method="POST" action="contact.php">
 
             <div class="row">
               <div class="col-md-6 mt-3 ">
 
                 <div class="form-outline">
-                  <input placeholder="First Name" id="firstName" class="form-control  " />
+                  <input placeholder="First Name" id="firstName" name="first_name" class="form-control" />
                   <label class="form-label" for="firstName" required></label>
                 </div>
 
@@ -75,7 +106,7 @@ include("header.php");
               <div class="col-md-6 mt-3 m-0">
 
                 <div class="form-outline">
-                  <input placeholder="Last Name" type="text" id="lastName" class="form-control" />
+                  <input placeholder="Last Name" type="text" id="lastName" name="last_name" class="form-control" />
                   <label class="form-label" for="lastName" required></label>
                 </div>
 
@@ -85,7 +116,7 @@ include("header.php");
             <div class="row">
               <div class="col-md-6 mt-0">
                 <div class="form-outline">
-                  <input placeholder="Email" type="email" id="emailAddress" class="form-control " required />
+                  <input placeholder="Email" type="email" id="emailAddress" name="email" class="form-control" required />
                   <label class="form-label" for="emailAddress"></label>
                 </div>
 
@@ -96,20 +127,20 @@ include("header.php");
                 <h6 class="mb-2 pb-1">Gender: </h6>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                    value="option1" checked />
+                  <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                    value="Female" checked />
                   <label class="form-check-label" for="femaleGender">Female</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                    value="option2" />
+                  <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                    value="Male" />
                   <label class="form-check-label" for="maleGender">Male</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                    value="option3" />
+                  <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                    value="Other" />
                   <label class="form-check-label" for="otherGender">Other</label>
                 </div>
 
@@ -119,17 +150,17 @@ include("header.php");
             <div class="row">
               <div class="col-md-6 ">
 
-                <div class="form-outline datepicker w-100">
-                  <input type="text" type="text" class="form-control " placeholder="Choose a date" id="birthdayDate"
+                <div class="form-outline">
+                  <input type="text" type="text" class="form-control " placeholder="Enter Message" name="msg" id="birthdayDate"
                     required>
-                  <label for="birthdayDate" class="form-label"></label>
+                  <label for="Message" class="form-label"></label>
                 </div>
 
               </div>
               <div class="col-md-6 ">
 
                 <div class="form-outline">
-                  <input placeholder="+92 213-3799717" type="tel" id="phoneNumber" class="form-control " required />
+                  <input placeholder="+92 213-3799717" name="num" type="tel" id="phoneNumber" class="form-control " required />
                   <label class="form-label" for="phoneNumber"></label>
                 </div>
 
@@ -137,7 +168,7 @@ include("header.php");
             </div>
 
             <div class="mt-4  ">
-              <button class="btn-form" name="submit">Submit</button>
+              <button class="btn-form" type="submit" name="submit">Submit</button>
             </div>
 
           </form>

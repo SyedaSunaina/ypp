@@ -26,10 +26,8 @@
             <tbody>
                 <?php
                 // Database connection
-                $con = new mysqli('localhost', 'root', '', 'ypp');
-                if ($con->connect_error) {
-                    die('Connection failed: ' . $con->connect_error);
-                }
+                
+                include("connection.php");
 
                 // Pagination settings
                 $products_per_page = 5;

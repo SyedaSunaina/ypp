@@ -9,12 +9,11 @@
     <div class="container mt-5">
         <h1 class="text-center">Edit Product</h1>
         <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $con = new mysqli('localhost', 'root', '', 'ypp');
-            if ($con->connect_error) {
-                die('Connection failed: ' . $con->connect_error);
-            }
 
+        include("connection.php");
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+           
             $id = $_POST['id'];
             $name = $_POST['pname'];
             $price = $_POST['pprice'];
