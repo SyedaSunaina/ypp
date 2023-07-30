@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   include("connection.php");
-
+  $sent = '';
   if (isset($_POST['submit'])) {
       $fname = $_POST['first_name'];
       $lname = $_POST['last_name'];
@@ -93,7 +93,11 @@ include("header.php");
       <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
         <div class="form-bg">
           <form id="myForm" method="POST">
-
+            <?php if (!empty($sent)) : ?>
+              <div class="alert alert-success mt-4">
+                <?php echo $sent; ?>
+              </div>
+            <?php endif; ?>
             <div class="row">
               <div class="col-md-6 mt-3 ">
 
@@ -170,7 +174,7 @@ include("header.php");
             <div class="mt-4  ">
               <button class="btn-form" type="submit" name="submit">Submit</button>
             </div>
-
+            
           </form>
         </div>
       </div>
