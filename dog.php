@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php include('header.php'); ?>
+
 <?php
 // Step 1: Database connection
-include("connection.php");
+//Included in header.php above
 
 // Step 2: Fetch data from the database with category "dog"
 $query = "SELECT * FROM products WHERE category = 'dog'";
@@ -23,10 +27,9 @@ if ($result->num_rows > 0) {
 
 
 
-<!DOCTYPE html>
-<html lang="en">
 
-<?php include('header.php'); ?>
+
+
 
 <body style="background-color: rgb(243, 155, 184) ;">
   <?php include('nav.php'); ?>
@@ -55,45 +58,9 @@ if ($result->num_rows > 0) {
 
 <?php include('cart.php'); ?>
 
-  <!-- start footer -->
-  <div class="container-fluid mt-3" id="footer-bg">
-  
-    <div class="row">
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 ml-0" id="footer-one">
-        <img class="footer-logo" src="assets/image/logo.png" alt="Footer">
-        <p class="footer-para mt-2" style="font-weight: bold;">A PET LOVER PARADISE</p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-two">
-        <img class="footer-img1" src="assets/image/blogimg4.png" alt="Footer">
-        <p class="footer-para mt-3">Cherish every moment with your pet and create cute memories that'll last a
-          lifetime.
-        </p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-three">
-        <img src="assets/image/footer.png" alt="Footer" class="footer-img1">
-        <p class="footer-para">Remember to provide them with the care, attention, and love they deserve.</p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="footer-four">
-        <span class="footer-connect ">Connect With Us Through: </span>
-        <section id="footersocial">
-          <a href="https://twitter.com/" target="_blank"><img src="assets/image/twitter.png" alt="twitter"
-              id="social-icon"></a>
-          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img src="assets/image/google.png"
-              alt="gmail" id="social-icon"></a>
-          <a href="https://pk.linkedin.com/" target="_blank" role="button"><img src="assets/image/linkedin.png"
-              alt="Linkedin" id="social-icon"></a>
-          <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/instagram.png" alt="instagram"
-              id="social-icon"></a>
-        </section>
-        <h6 class="mt-2">Useful Links:</h6>
-        <p class="footer-links"><a href="index.php">Home</a><a href="category.php">Category</a> <a
-            href="blogs.php">Blogs</a><a href="contact.php">Contact</a></p>
-      </div>
-    </div>
-  
-  </div>
-  <!-- Footer End -->
-
+    <!-- start footer -->
+    <?php include('footer.php');?>
+    <!-- Footer End -->
 
 
 
@@ -127,7 +94,7 @@ if (closeShopping) {
     body.classList.remove('active');
   });
 }
-let products = <?php echo json_encode($products); $con->close(); ?>;
+let products = <?php echo json_encode($products);?>;
 let listCards  = [];
 
 //LOAD ALL PRODUCTS ON PAGE LOAD

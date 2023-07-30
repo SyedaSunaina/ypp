@@ -1,7 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<?php
+include("header.php");
+?>
+
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  include("connection.php");
+
   $sent = '';
   if (isset($_POST['submit'])) {
       $fname = $_POST['first_name'];
@@ -28,12 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $con->close();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<?php
-include("header.php");
-?>
 <body style="background-color: rgb(198, 242, 248) ;">
 
   <?php
@@ -67,7 +69,7 @@ include("header.php");
 
         <ul class="contact-ul ">
           <li class="location-text"><img src="assets/image/location.png" alt="home" class="icon-location"> Location</li>
-          <p class="location-para">Istiklal Street 1st Block 1st Cross, Pakistan</p>
+          <p class="location-para"><?php echo $mainsettings['address']; ?></p>
           <li class="location-text"><img src="assets/image/clock .png" alt="home" class="icon-clock"> Grooming Hours
           </li>
           <p class="location-para">Mon-Sat 8:00pm - 12:00pm</p>
@@ -206,12 +208,12 @@ include("header.php");
           <img src="assets/image/email.png" class="icon-mail" alt="Email">
 
           <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"
-            class="mail-link">yummypetpalate@gmail.com</a>
+            class="mail-link"><?php echo $mainsettings['email']; ?></a>
 
           <img src="assets/image/phone-call.png" class="icon-mail" alt="Email"> <br>
-          <a href="tel:+92-564-3567521" target="_blank" class="mail-tel">92-312918743</a>
+          <a href="tel:+92-564-3567521" target="_blank" class="mail-tel"><?php echo $mainsettings['number']; ?></a>
           <img src="assets/image/time-management.png" alt="" class="icon-mail">
-          <p class="mail-work">12:00am to 12:00pm</p>
+          <p class="mail-work"><?php echo $mainsettings['timings']; ?></p>
         </div>
       </div>
       <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
@@ -229,42 +231,8 @@ include("header.php");
   </div>
 
   <!-- MAP ENDS -->
-  <!-- start footer -->
-  <div class="container-fluid mt-3" id="footer-bg">
-
-    <div class="row">
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 ml-0" id="footer-one">
-        <img class="footer-logo" src="assets/image/logo.png" alt="Footer">
-        <p class="footer-para mt-2" style="font-weight: bold;">A PET LOVER PARADISE</p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-two">
-        <img class="footer-img1" src="assets/image/blogimg4.png" alt="Footer">
-        <p class="footer-para mt-3">Cherish every moment with your pet and create cute memories that'll last a lifetime.
-        </p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-three">
-        <img src="assets/image/footer.png" alt="Footer" class="footer-img1">
-        <p class="footer-para">Remember to provide them with the care, attention, and love they deserve.</p>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="footer-four">
-        <span class="footer-connect ">Connect With Us Through: </span>
-        <section id="footersocial">
-          <a href="https://twitter.com/" target="_blank"><img src="assets/image/twitter.png" alt="twitter"
-              id="social-icon"></a>
-          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img
-              src="assets/image/google.png" alt="gmail" id="social-icon"></a>
-          <a href="https://pk.linkedin.com/" target="_blank" role="button"><img src="assets/image/linkedin.png"
-              alt="Linkedin" id="social-icon"></a>
-          <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/instagram.png" alt="instagram"
-              id="social-icon"></a>
-        </section>
-        <h6 class="mt-2">Useful Links:</h6>
-        <p class="footer-links"><a href="index.php">Home</a><a href="category.php">Category</a> <a
-            href="blogs.php">Blogs</a><a href="contact.php">Contact</a></p>
-      </div>
-    </div>
-
-  </div>
+    <!-- start footer -->
+    <?php include('footer.php');?>
   <!-- Footer End -->
 
 

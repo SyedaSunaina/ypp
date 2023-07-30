@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("connection.php");
 include("header.php");
 ?>
 <body style="background-color: rgb(198, 242, 248) ;">
@@ -16,9 +15,9 @@ include("header.php");
                 <h5 class="blog">Care of your <br> little pets.🐬</h1>
                     <p class="blog-para">We believe finding a reliable,professional pet sitter should be <br> easy.So we
                         make sure every member of our family.</p>
-                    <button class="btn-ourservice"><a href="contact.php"
+                    <button class="btn-ourservice"><a href="grooming.php"
                             style="text-decoration: none; color: black;">Our Service↗</a></button><button
-                        class="btn-call"><a href="tel:+111-222-999"
+                        class="btn-call"><a href="tel:<?php echo $mainsettings['number']; ?>"
                             style="text-decoration: none; color: black;">📞Schedule a call</a></button>
             </div>
             <div class=" col-md-3 col-lg-3 col-xl-3">
@@ -322,44 +321,7 @@ include("header.php");
         </div>
     </section>
 
-    <!-- start footer -->
-    <div class="container-fluid mt-3" id="footer-bg">
-
-        <div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 ml-0" id="footer-one">
-                <img class="footer-logo" src="assets/image/logo.png" alt="Footer">
-                <p class="footer-para mt-2" style="font-weight: bold;">A PET LOVER PARADISE</p>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-two">
-                <img class="footer-img1" src="assets/image/blogimg4.png" alt="Footer">
-                <p class="footer-para mt-3">Cherish every moment with your pet and create cute memories that'll last
-                    a
-                    lifetime.</p>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" id="footer-three">
-                <img src="assets/image/footer.png" alt="Footer" class="footer-img1">
-                <p class="footer-para">Remember to provide them with the care, attention, and love they deserve.</p>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="footer-four">
-                <span class="footer-connect ">Connect With Us Through: </span>
-                <section id="footersocial">
-                    <a href="https://twitter.com/" target="_blank"><img src="assets/image/twitter.png" alt="twitter"
-                            id="social-icon"></a>
-                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img
-                            src="assets/image/google.png" alt="gmail" id="social-icon"></a>
-                    <a href="https://pk.linkedin.com/" target="_blank" role="button"><img
-                            src="assets/image/linkedin.png" alt="Linkedin" id="social-icon"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/instagram.png"
-                            alt="instagram" id="social-icon"></a>
-                </section>
-                <h6 class="mt-2">Useful Links:</h6>
-                <p class="footer-links"><a href="index.php">Home</a><a href="category.php">Category</a> <a
-                        href="blogs.php">Blogs</a><a href="contact.php">Contact</a></p>
-            </div>
-        </div>
-
-    </div>
-    <!-- Footer End -->
+    <?php include('footer.php');?>
 
 
     <!-- java script     -->
