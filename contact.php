@@ -98,16 +98,16 @@ include("header.php");
               <div class="col-md-6 mt-3 ">
 
                 <div class="form-outline">
-                  <input placeholder="First Name" id="firstName" name="first_name" class="form-control" />
-                  <label class="form-label" for="firstName" required></label>
+                  <input placeholder="First Name" id="firstName" name="first_name" class="form-control" required />
+                  <label class="form-label" for="firstName"></label>
                 </div>
 
               </div>
               <div class="col-md-6 mt-3 m-0">
 
                 <div class="form-outline">
-                  <input placeholder="Last Name" type="text" id="lastName" name="last_name" class="form-control" />
-                  <label class="form-label" for="lastName" required></label>
+                  <input placeholder="Last Name" type="text" id="lastName" name="last_name" class="form-control" required />
+                  <label class="form-label" for="lastName"></label>
                 </div>
 
               </div>
@@ -128,19 +128,19 @@ include("header.php");
 
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="gender" id="femaleGender"
-                    value="Female" checked />
+                    value="Female" checked required/>
                   <label class="form-check-label" for="femaleGender">Female</label>
                 </div>
 
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="gender" id="maleGender"
-                    value="Male" />
+                    value="Male" required/>
                   <label class="form-check-label" for="maleGender">Male</label>
                 </div>
 
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="gender" id="otherGender"
-                    value="Other" />
+                    value="Other" required/>
                   <label class="form-check-label" for="otherGender">Other</label>
                 </div>
 
@@ -152,7 +152,7 @@ include("header.php");
 
                 <div class="form-outline">
                   <input type="text" type="text" class="form-control " placeholder="Enter Message" name="msg" id="birthdayDate"
-                    required>
+                    required />
                   <label for="Message" class="form-label"></label>
                 </div>
 
