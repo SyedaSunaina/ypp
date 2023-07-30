@@ -181,11 +181,11 @@ include("header.php");
     </div>
   </div>
 
-  <div class="container-fluid" data-aos="fade-down">
+  <div class="container-fluid">
     <div class="row justify-content-center ">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <div>
-          <img src="assets/image/bond.png" alt="Wait until image load.." class="bone">
+          <img src="assets/image/bond.png" alt="Wait until image load.." class="bone" data-aos="fade-down">
         </div>
 
       </div>
