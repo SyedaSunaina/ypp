@@ -122,10 +122,11 @@ if (openShopping) {
 /*openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })*/
-closeShopping.addEventListener('click', ()=>{
+if (closeShopping) {
+  closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
-})
-
+  });
+}
 let products = <?php echo json_encode($products); $con->close(); ?>;
 let listCards  = [];
 

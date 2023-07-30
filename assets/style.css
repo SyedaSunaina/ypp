@@ -524,6 +524,7 @@ h4 {
     background-image: url('/img/subtle-prism.png');
     position: absolute;
     border-radius: 6px;
+    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
