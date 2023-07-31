@@ -77,22 +77,22 @@
                         <small class="form-text text-muted">Leave it empty to keep the existing image.</small>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="title" class="form-control" value="<?php echo $mainsettings['title']; ?>" required>
+                        <input type="text" name="title" class="form-control" placeholder="Website Title" value="<?php echo $mainsettings['title']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subtitle" class="form-control" value="<?php echo $mainsettings['subtitle']; ?>" required>
+                        <input type="text" name="subtitle" class="form-control" placeholder="Website Subtitle" value="<?php echo $mainsettings['subtitle']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" value="<?php echo $mainsettings['email']; ?>" required>
+                        <input type="email" name="email" class="form-control" placeholder="Website Email" value="<?php echo $mainsettings['email']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="address" class="form-control" value="<?php echo $mainsettings['address']; ?>" required>
+                        <input type="text" name="address" class="form-control" placeholder="Website Address" value="<?php echo $mainsettings['address']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="number" class="form-control" value="<?php echo $mainsettings['number']; ?>" required>
+                        <input type="text" name="number" class="form-control" placeholder="Website Number" value="<?php echo $mainsettings['number']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="timing" class="form-control" value="<?php echo $mainsettings['timings']; ?>" required>
+                        <input type="text" name="timing" class="form-control" placeholder="Website Timings" value="<?php echo $mainsettings['timings']; ?>" required>
                     </div>
                     
                     <input type="submit" class="btn btn-primary" value="Update">

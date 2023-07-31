@@ -24,7 +24,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="social-links.php">
                 <i class="zmdi zmdi-share"></i> Social Link
               </a>
             </li>
