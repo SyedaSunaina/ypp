@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
   overflow-x: hidden;
@@ -32,7 +33,7 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #37474F;
+  background: #9ADCFF;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -55,22 +56,25 @@ body {
 #sidebar header a:hover {
   color: #fff;
 }
-
+#sidebar header a img{
+  width: 90px;
+  height: 50px;
+}
 #sidebar .nav{
   
 }
 
 #sidebar .nav a{
   background: none;
-  border-bottom: 1px solid #455A64;
-  color: #CFD8DC;
+  border-bottom: 1px solid  #0e6fa3 ;
+  color: black;
   font-size: 14px;
   padding: 16px 24px;
 }
 
 #sidebar .nav a:hover{
   background: none;
-  color: #ECEFF1;
+  color:#263238;
 }
 
 #sidebar .nav a i{

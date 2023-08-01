@@ -1,6 +1,6 @@
         <div id="sidebar">
           <header>
-            <a href="#">YPP-ADMIN</a>
+            <a href="#"><img src="assets/image/<?php echo $mainsettings['logo']?>" alt=""></a>
           </header>
           <ul class="nav">
           <li>
