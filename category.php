@@ -27,7 +27,7 @@ include("header.php");
       <div class="flip-card col-sm-5 col-md-5 col-lg-5 col-xl-5 flip-card-1">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="assets/image/cat category.jpg" alt="Avatar" class="flip-card-img">
+            <img src="assets/image/dogphone.png" alt="Avatar" class="flip-card-img">
           </div>
           <div class="flip-card-back">
             <h1 style="margin-top: 40px;"><a href="cat.php" style="text-decoration: none; color: black;">Cat</a></h1>
@@ -37,7 +37,7 @@ include("header.php");
       <div class="flip-card col-sm-5 col-md-5 col-lg-5 col-xl-5 flip-card-2">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="assets/image/bananacat.jpg" alt="Avatar" class="flip-card-img">
+            <img src="assets/image/dogdog.png" alt="Avatar" class="flip-card-img">
           </div>
           <div class="flip-card-back">
             <h1 style="margin-top: 40px;"><a href="dog.php" style="text-decoration: none; color: black;">Dog</a></h1>
@@ -65,7 +65,7 @@ include("header.php");
                 Now</a></button>
           </div>
           <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-            <img src="assets/image/greendog.jpg" alt="Sale Card" class="sale-img">
+            <img src="assets/image/dogboarding.jpg" alt="Sale Card" class="sale-img">
           </div>
         </div>
       </div>

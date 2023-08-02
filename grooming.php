@@ -20,7 +20,7 @@ include("cart.php");
 
     <div class="container">
         <div class="row mt-5">
-            <div class="col-4 ">
+            <div class="col-4 "  data-aos="fade-up">
                 <img src="assets/image/doggrooming.png" alt="" class="dog-grooming">
                 <span class="boarding">Dog Boarding</span>
                 <p class="mt-4"><i class="fa-solid fa-xl fa-check" style="color: #30a211;"></i> Leverage agile
@@ -31,7 +31,7 @@ include("cart.php");
                 </p>
             </div>
 
-            <div class="col-4 ">
+            <div class="col-4 "  data-aos="fade-down">
                 <img src="assets/image/catgrooming.png" alt="" class="dog-grooming">
                 <span class="boarding">Cat Boarding</span>
                 <p class="mt-4"><i class="fa-solid fa-xl fa-check" style="color: #30a211;"></i> At the end of the
@@ -42,7 +42,7 @@ include("cart.php");
                     managed.</p>
             </div>
 
-            <div class="col-4 ">
+            <div class="col-4 "  data-aos="fade-up">
                 <img src="assets/image/spa.png" alt="" class="dog-grooming">
                 <span class="boarding">Spa & Grooming</span>
                 <p class="mt-4"><i class="fa-solid fa-xl fa-check" style="color: #30a211;"></i> Taking seamless key
@@ -59,10 +59,10 @@ include("cart.php");
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-6 mt-5">
-                <img src="assets/image/catboarding.jpg" alt="" class="catspa-img">
+                <img src="assets/image/catspa.jpg" alt="" class="catspa-img"  data-aos="fade-right">
             </div>
             <div class="col-6 mt-5">
-                <h1 class="catspa-head">"CAT <span> BOARDING"</span></h1>
+                <h1 class="catspa-head" >"Cat <span> Boarding"</span></h1>
                 <ul class="faq mt-5">
                     <li class="q"> OPEN BOARDING<i class="fas fa-plus"></i></li>
                     <li class="a">Staff learn proper handling, signs, and symptoms of illness, dog expressions, and body
@@ -83,7 +83,7 @@ include("cart.php");
     <div class="container-fluid">
         <div class="row mt-5">
             <div class="col-6">
-                <h1 class="catspa-head">"DOG <span> BOARDING"</span></h1>
+                <h1 class="catspa-head">"Dog <span> Boarding"</span></h1>
                 <ul class="faq mt-5">
                     <li class="q"> OPEN BOARDING<i class="fas fa-plus"></i></li>
                     <li class="a">Staff learn proper handling, signs, and symptoms of illness, dog expressions, and body
@@ -99,7 +99,7 @@ include("cart.php");
             </div>
 
             <div class="col-6">
-                <img src="assets/image/dogboarding.jpg" alt="" class="catspa-img">
+                <img src="assets/image/dogspa.png" alt="" id="catspa-img"  data-aos="fade-left">
             </div>
 
         </div>

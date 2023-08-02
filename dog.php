@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
   
 
   <!-- cat category start -->
-    <h1 class="cat-heading">"DOG CATEGORY"🍗</h1>
+    <h1 class="cat-heading">"Dog Category"🍗</h1>
     <!-- filter -->
   <div class="container">
     <div class="row">
@@ -103,7 +103,7 @@ function initApp(){
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-        <div class= "container">
+        <div class= "container" data-aos="fade-up">
           <div class="row">
         <div class = "card">
       <div class = "image">

@@ -7,30 +7,30 @@ include("connection.php");
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="assets/image/<?php echo $mainsettings['logo'];?>" alt="Yummy Pet Palate" class="logo"></a>
+      <a class="navbar-brand" href="#" data-aos="fade-left"><img src="assets/image/<?php echo $mainsettings['logo'];?>" alt="Yummy Pet Palate" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent" >
         <ul class="navbar-nav ms-auto ">
          
           <li class="nav-item mt-1">
-            <button class="cart">
+            <button class="cart" data-aos="fade-right">
               <i id="cart-shop" class="shopping quantity fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
               <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
             </button>
   
           </li>
           <li class="nav-item mx-2 mt-1">
-            <button class="icon-login" id="user-btn">
+            <button class="icon-login" id="user-btn" data-aos="fade-right">
               <i class="fa-solid fa-user-plus fa-lg" style="color: #c187d1;"></i>
             </button>
   
           </li>
           <li class="nav-item ">
             <div id="navigation">
-              <div id="menu" onclick="onclickmenu()">
+              <div id="menu" onclick="onclickmenu()" data-aos="fade-right">
                 <div id="bar1" class="bar"></div>
                 <div id="bar2" class="bar"></div>
                 <div id="bar3" class="bar"></div>

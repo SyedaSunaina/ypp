@@ -61,12 +61,12 @@
                             <td><?php echo $row['category']; ?></td>
                             <td><?php echo $row['filter']; ?></td>
                             <td><img src="./assets/image/<?php echo $row['image']; ?>" alt="Product Image" width="50"></td>
-                            <td><a href="edit-product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Update</a></td>
+                            <td><a href="edit-product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a></td>
                             <td>
                                 <!-- Delete button with form submission -->
                                 <form method="post" action="delete-product.php" onsubmit="return confirm('Are you sure you want to delete this product?')">
                                     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></button>
                                 </form>
                             </td>
                         </tr>

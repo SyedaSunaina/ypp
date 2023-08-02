@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .pawblue {
     top: 16%;
     left: 63%;
@@ -35,7 +36,7 @@
 .cat-heading {
     text-align: center;
     margin-top: 20px;
-    font-family: pacifio;
+    font-family: pacifico;
 }
 
 .container .card {
@@ -156,6 +157,7 @@ background-color: rgb(205, 64, 111);
 
 .active .card{
     left: calc(100% - 300px);
+    z-index: 102;
 }
 .active .container{
    transform: translateX(-50px);
