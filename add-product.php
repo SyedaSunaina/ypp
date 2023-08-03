@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
-<body style="background-color:  #9ADCFF;">
+<body style="background-color:  white;">
     <div id="viewport">
         <!-- Sidebar -->
         <?php include('admin-nav.php') ?>
