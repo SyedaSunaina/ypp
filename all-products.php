@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("admin-header.php");?>
-<body>
+<body style="background-color:  #9ADCFF;">
     <div id="viewport">
         <!-- Sidebar -->
         <?php include('admin-nav.php') ?>
@@ -18,22 +18,21 @@
               </ul>
             </div>
           </nav>
-          <div class="container-fluid">
-          <div class="container mt-5">
+          <div class="container-fluid" id="all-products">
+            
         <h1 class="text-center">All Products</h1> 
-        <!-- <div style="float: right; padding: 10px;" class="addnewbtn"><a href="add-product.php" target="_blank" class="btn btn-primary">
-            + Add New Product</a></div> -->
+          <div class="container">
         <table class="table">
             <thead>
                 <tr> 
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Sub-Category</th>
-                    <th>Image</th>
-                    <th>Update</th>
-                    <th>Delete</th> <!-- New column for Delete button -->
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>CATEGORY</th>
+                    <th>SUB-CATEGORY</th>
+                    <th>IMAGE</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th> <!-- New column for Delete button -->
                 </tr>
             </thead>
             <tbody>
@@ -61,7 +60,7 @@
                             <td><?php echo $row['category']; ?></td>
                             <td><?php echo $row['filter']; ?></td>
                             <td><img src="./assets/image/<?php echo $row['image']; ?>" alt="Product Image" width="50"></td>
-                            <td><a href="edit-product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a></td>
+                            <td><a href="edit-product.php?id=<?php echo $row['id']; ?>" class="btn btn-update"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a></td>
                             <td>
                                 <!-- Delete button with form submission -->
                                 <form method="post" action="delete-product.php" onsubmit="return confirm('Are you sure you want to delete this product?')">
