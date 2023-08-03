@@ -36,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
-<body>
+<body style="background-color:  #9ADCFF;">
     <div id="viewport">
         <!-- Sidebar -->
         <?php include('admin-nav.php') ?>
         <!-- Content -->
-        <div id="content">
+        <div id="content" >
           <nav class="navbar navbar-default">
             <div class="container-fluid">
               <ul class="nav navbar-nav navbar-right">
@@ -53,12 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </ul>
             </div>
           </nav>
-          <div class="container-fluid">
-            <!-- <h1>Simple Sidebar</h1>
-            <p>
-              Make sure to keep all page content within the 
-              <code>#content</code>.
-            </p> -->
+          <div class="container-fluid d-flex align-items-center" id="add-product" >
             <div class="container">
         
         <div class="row justify-content-center">
@@ -70,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php echo $infomsg; ?>
               </div>
             <?php endif; ?>
-                    <div class="form-group">
+                    <div class="form-group justify-content-center">
                         <input type="text" name="pname" class="form-control" placeholder="Product Name" required>
                     </div>
                     <div class="form-group">
@@ -95,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="file" name="pimage" class="form-control-file" required>
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="add" class="btn btn-primary" value="Add Product">
+                        <input type="submit" name="add" class="btn" value="Add Product">
                     </div>
                 </form>
             </div>
