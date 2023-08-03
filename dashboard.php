@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("admin-header.php");?>
-<body style="background-color:  #9ADCFF;">
+<body style="background-color:  white;">
     <div id="viewport">
        <!-- Sidebar -->
        <?php include('admin-nav.php') ?>
