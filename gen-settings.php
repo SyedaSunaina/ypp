@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("admin-header.php");?>
-<body>
+<body style="background-color:  white;">
     <div id="viewport">
         <!-- Sidebar -->
         <?php include('admin-nav.php') ?>
@@ -19,6 +19,8 @@
               </ul>
             </div>
           </nav>
+            <div class="container-fluid d-flex align-items-center" id="add-product" >
+        
           <div class="container">
         
         <div class="row justify-content-center">

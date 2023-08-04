@@ -33,18 +33,20 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #9ADCFF;
+  background: #65c8fd;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  border-right: #3cbbff 2px solid;
   transition: all 0.5s ease;
 }
 
 #sidebar header {
-  background-color: #263238;
   font-size: 20px;
   line-height: 52px;
+  border-bottom: 1.5px solid #0e6fa3;
   text-align: center;
+
 }
 
 #sidebar header a {
@@ -56,27 +58,95 @@ body {
 #sidebar header a:hover {
   color: #fff;
 }
-#sidebar header a img{
-  width: 90px;
-  height: 50px;
-}
-#sidebar .nav{
-  
+
+#sidebar .nav li a:hover {
+  background-color: #3cbbff;
+  color: black;
+
 }
 
-#sidebar .nav a{
+#sidebar header a img {
+  width: 90px;
+  height: 90px;
+}
+
+
+
+#sidebar .nav a {
   background: none;
-  border-bottom: 1px solid  #0e6fa3 ;
+  border-bottom: 1px solid #0e6fa3;
   color: black;
   font-size: 14px;
   padding: 16px 24px;
 }
 
-#sidebar .nav a:hover{
+#sidebar .nav a:hover {
   background: none;
-  color:#263238;
+  color: #263238;
 }
 
-#sidebar .nav a i{
+#sidebar .nav a i {
   margin-right: 16px;
+}
+/* ALL PRODUCTS */
+#all-products .table {
+  justify-content: center;
+  width: 85%;
+  margin-top: 20px;
+}
+
+#all-products .table tr {
+  border-bottom: #65c8fd 3px solid;
+}
+
+#all-products .table tbody .btn-update {
+  background-color: #32b6fe;
+}
+
+#all-products h1 {
+  font-family: pacifio;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -10px;
+  text-transform: uppercase;
+
+}
+/* ADD PRDODUCT */
+#add-product {
+  margin-left: 200px;
+}
+
+#add-product h1 {
+  font-family: pacifio;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+#add-product .btn {
+  background-color: palevioletred;
+  padding: 10px;
+  border: 0px;
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
+
+}
+
+#add-product .btn:hover {
+  box-shadow: 0 8px 8px 0 rgb(255, 88, 144);
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  -moz-transform: translate(0px, 5px);
+}
+
+#add-product .form-group input {
+  border-radius: 5px;
+
+}
+
+#add-product .form-group input:focus {
+  border-color: #0e6fa3;
+
 }

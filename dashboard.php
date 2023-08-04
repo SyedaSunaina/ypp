@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("admin-header.php");?>
-<body>
+<body style="background-color:  white;">
     <div id="viewport">
        <!-- Sidebar -->
        <?php include('admin-nav.php') ?>
@@ -20,10 +20,10 @@
           </nav>
           <div class="container-fluid">
             <h1>Simple Sidebar</h1>
-            <p>
+            <!-- <p>
               Make sure to keep all page content within the 
               <code>#content</code>.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>

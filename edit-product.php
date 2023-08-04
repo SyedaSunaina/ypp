@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("admin-header.php");?>
-<body>
+<body style="background-color:  white;">
     <div id="viewport">
         <!-- Sidebar -->
         <?php include('admin-nav.php') ?>
@@ -20,7 +20,7 @@
               </ul>
             </div>
           </nav>
-          <div class="container">
+          <div class="container" id="add-product">
         
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -102,11 +102,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pimage">Product Image: <img src='assets/image/<?php echo $product['image'] ?>' width="100" height="150"></label>
+                        <label for="pimage">Product Image: <img src='assets/image/<?php echo $product['image'] ?>' width="100" height="100"></label>
                         <input type="file" name="pimage" class="form-control-file">
                         <small class="form-text text-muted">Leave it empty to keep the existing image.</small>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Update">
+                    <input type="submit" class="btn" value="Update">
                 </form>
                 <?php
             } else {
