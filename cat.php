@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
    // echo json_encode(array('message' => 'No products found in the "cat" category.'));
 }
 
-// Close the database connection
+// Close the database connection 
 //$con->close();
 ?>
 

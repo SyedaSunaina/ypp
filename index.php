@@ -13,9 +13,7 @@ include("cart.php");
     <div class="container-fluid">
         <div class="row mt-1">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="gif-container">
-                    <img class="gif-animation" src="assets/image/doggif.gif" alt="GIF" width="100px">
-                </div>
+               
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
 <?php
 include("header.php");
 ?>
-<body>
+<body style="background-color: #F39BB8;">
 <?php
 include("nav.php");
 include("cart.php");
@@ -16,7 +16,7 @@ include("cart.php");
     
     <!-- GROOMING STARTS -->
 
-    <img src="assets/image/groomingbanner.png" alt="" class="grooming-banner">
+    <img src="assets/image/gromingbanner.png" alt="" class="grooming-banner">
 
     <div class="container">
         <div class="row mt-5">
@@ -59,7 +59,7 @@ include("cart.php");
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-6 mt-5">
-                <img src="assets/image/catspa.jpg" alt="" class="catspa-img"  data-aos="fade-right">
+                <img src="assets/image/catspa.jpg" alt="" class="catspa-img" data-aos="fade-down" >
             </div>
             <div class="col-6 mt-5">
                 <h1 class="catspa-head" >"Cat <span> Boarding"</span></h1>
@@ -99,7 +99,7 @@ include("cart.php");
             </div>
 
             <div class="col-6">
-                <img src="assets/image/dogspa.png" alt="" id="catspa-img"  data-aos="fade-left">
+                <img src="assets/image/dogspa.png" alt="" id="catspa-img"  data-aos="fade-up">
             </div>
 
         </div>
