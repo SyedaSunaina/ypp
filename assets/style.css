@@ -81,7 +81,7 @@
 .bar {
     height: 5px;
     width: 90%;
-    background-color: #c187d1;
+    background-color: palevioletred;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -104,7 +104,7 @@
 }
 
 .nav li a:hover {
-    text-decoration: underline #c187d1 3px solid;
+    text-decoration: underline palevioletred 3px solid;
 }
 
 .nav li {
@@ -155,7 +155,7 @@
     }
 }
 .icon .bar {
-    background-color: #c187d1;
+    background-color: rgb(20, 19, 19);
 }
 
 .icon #bar1 {
@@ -171,7 +171,7 @@
     opacity: 0;
 }
 
-/* SEARCH BAR START */
+SEARCH BAR START */
 .search {
 
     display: flex;
@@ -219,7 +219,7 @@ color: #c187d1;
     transition: .4s;
 }
 
-/* SEARCH END */
+/* SEARCH END
 /* Responsive styles */
 @media (min-width: 767px) and (max-width: 990px) {
     .navbar {
@@ -643,7 +643,7 @@ h4 {
     top: 0px;
 
     right: 50px;
-    color: #c187d1;
+    color: black;
     font-weight: bold;
     font-size: 50px;
 
@@ -1660,7 +1660,6 @@ transform: translateY(-10px);
         width: 250px;
         height: 150px;
         margin-top: 250px;
-        background-color: rgb(219, 125, 156);
     }
 
     .sale-text {
@@ -1678,7 +1677,6 @@ transform: translateY(-10px);
     }
 
     .sale-btn {
-        background-color: rgb(203, 64, 110);
         font-size: 8px;
         padding: 8px;
         width: 60px;
@@ -1695,12 +1693,10 @@ transform: translateY(-10px);
         width: 250px;
         height: 150px;
         margin-top: 250px;
-        background-color: rgb(185, 123, 68);
 
     }
 
     .sale-btn2 {
-        background-color: rgb(101, 65, 33);
         font-size: 8px;
         padding: 8px;
         width: 60px;
@@ -1852,7 +1848,7 @@ justify-content: center;
         height: 150px;
         position: absolute;
         left: 210px;
-        top: 826px;
+        top: 626px;
 
     }
 
@@ -1861,7 +1857,7 @@ justify-content: center;
         height: 150px;
         position: absolute;
         left: 210px;
-        top: 626px;
+        top: 826px;
 
     }
 .categorybanner{
@@ -1890,7 +1886,6 @@ height: 300px;}
     }
 
     .sale-btn {
-        background-color: rgb(203, 64, 110);
         font-size: 8px;
         padding: 8px;
         width: 60px;
@@ -1906,12 +1901,10 @@ height: 300px;}
         width: 180px;
         height: 150px;
 
-        background-color: rgb(185, 123, 68);
-
+      
     }
 
     .sale-btn2 {
-        background-color: rgb(101, 65, 33);
         font-size: 8px;
         padding: 8px;
         width: 60px;
@@ -2242,7 +2235,7 @@ height: 300px;}
     border-top-right-radius: 20px;
     margin-left: 20%;
     margin-top: 50px;
-    background-color: rgb(249, 194, 249);
+    background-color: #FEBBCC;
 }
 
 .sidemap-img {

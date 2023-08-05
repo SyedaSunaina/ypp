@@ -41,9 +41,9 @@ include("cart.php");
                 <p><i class="fa-solid fa-xl fa-check" style="color: #30a211;"></i> Podcasting operational change
                     managed.</p>
             </div>
-
+ 
             <div class="col-4 "  data-aos="fade-up">
-                <img src="assets/image/spa.png" alt="" class="dog-grooming">
+                <img src="assets/image/spa.png" alt="" class="dog-grooming img-">
                 <span class="boarding">Spa & Grooming</span>
                 <p class="mt-4"><i class="fa-solid fa-xl fa-check" style="color: #30a211;"></i> Taking seamless key
                     performance.</p>
@@ -58,10 +58,10 @@ include("cart.php");
     <!-- catboarding -->
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-6 mt-5">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-5">
                 <img src="assets/image/catspa.jpg" alt="" class="catspa-img" data-aos="fade-down" >
             </div>
-            <div class="col-6 mt-5">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-5">
                 <h1 class="catspa-head" >"Cat <span> Boarding"</span></h1>
                 <ul class="faq mt-5">
                     <li class="q"> OPEN BOARDING<i class="fas fa-plus"></i></li>
@@ -82,7 +82,7 @@ include("cart.php");
     <!-- dogboarding -->
     <div class="container-fluid">
         <div class="row mt-5">
-            <div class="col-6">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <h1 class="catspa-head">"Dog <span> Boarding"</span></h1>
                 <ul class="faq mt-5">
                     <li class="q"> OPEN BOARDING<i class="fas fa-plus"></i></li>
@@ -98,7 +98,7 @@ include("cart.php");
                 </ul>
             </div>
 
-            <div class="col-6">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <img src="assets/image/dogspa.png" alt="" id="catspa-img"  data-aos="fade-up">
             </div>
 

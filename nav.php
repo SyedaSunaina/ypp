@@ -17,14 +17,14 @@ include("connection.php");
          
           <li class="nav-item mt-1">
             <button class="cart" data-aos="fade-right">
-              <i id="cart-shop" class="shopping quantity fa-solid fa-cart-shopping fa-lg" style="color: #c187d1;"></i>
-              <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color: #c187d1;"></i>
+              <i id="cart-shop" class="shopping quantity fa-solid fa-cart-shopping fa-lg" style="color: palevioletred;"></i>
+              <i id="cart-shop-open" class="fa-solid fa-cart-plus fa-lg" style="color:palevioletred;"></i>
             </button>
   
           </li>
           <li class="nav-item mx-2 mt-1">
             <button class="icon-login" id="user-btn" data-aos="fade-right">
-              <i class="fa-solid fa-user-plus fa-lg" style="color: #c187d1;"></i>
+              <i class="fa-solid fa-user-plus fa-lg" style="color: palevioletred;"></i>
             </button>
   
           </li>
@@ -80,7 +80,7 @@ include("connection.php");
                           <input type="password" class="form-style" placeholder="Password" required>
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="index.php" class="btn mt-4" id="sumbit">Login</a>
+                        <a href="#" class="btn mt-4" id="sumbit">Login</a>
                         <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot
                             your
                             password?</a></p>
