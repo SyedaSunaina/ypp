@@ -108,46 +108,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   
 });
-/*document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('myForm');
-  const formOverlay = document.getElementById('form-overlay');
-  const overlayContent = formOverlay.querySelector('.overlay-content');
-  const submitButton = form.querySelector('button[name="submit"]');
-  const closeButton = formOverlay.querySelector('.close-button');
-
-  submitButton.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent form submission
-
-    // Get form input values
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('emailAddress').value;
-    const gender = document.querySelector('input[name="gender"]:checked').nextElementSibling.textContent;
-    const birthday = document.getElementById('birthdayDate').value;
-    const phoneNumber = document.getElementById('phoneNumber').value;
-
-    // Update overlay with submitted information
-    document.getElementById('submittedFirstName').textContent = `First Name: ${firstName}`;
-    document.getElementById('submittedLastName').textContent = `Last Name: ${lastName}`;
-    document.getElementById('submittedEmail').textContent = `Email: ${email}`;
-    document.getElementById('submittedGender').textContent = `Gender: ${gender}`;
-    document.getElementById('submittedBirthday').textContent = `Birthday: ${birthday}`;
-    document.getElementById('submittedPhoneNumber').textContent = `Phone Number: ${phoneNumber}`;
-
-    // Show the form overlay
-    formOverlay.style.display = 'flex';
-  });
-
-  closeButton.addEventListener('click', function () {
-    formOverlay.style.display = 'none'; // Hide the form overlay when the close button is clicked
-  });
-
-  formOverlay.addEventListener('click', function (e) {
-    if (e.target === formOverlay) {
-      formOverlay.style.display = 'none'; // Hide the form overlay when clicked outside the content
-    }
-  });
-});*/
 
 // shop cart
 document.getElementById("submit").addEventListener("click", function () {
@@ -157,3 +117,42 @@ document.querySelector('.cart-button').addEventListener('click', function () {
   document.getElementById('cart-shop-open').style.display = 'block';
   document.getElementById('cart-shop').style.display = 'none';
 });
+//VALIDATION 
+function validateForm() {
+        var isValid = true;
+
+        var fullnameInput = document.forms[0].elements["fullname"];
+        var phoneInput = document.forms[0].elements["phone"];
+        var emailInput = document.forms[0].elements["email"];
+        var passwordInput = document.forms[0].elements["password"];
+
+        // Validate Full Name
+        if (!fullnameInput.value.match(/[a-zA-Z ]+/)) {
+            highlightInput(fullnameInput);
+            isValid = false;
+        }
+
+        // Validate Phone Number
+        if (!phoneInput.value.match(/[0-9]{11}/)) {
+            highlightInput(phoneInput);
+            isValid = false;
+        }
+
+        // Validate Email
+        if (!emailInput.value.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+            highlightInput(emailInput);
+            isValid = false;
+        }
+
+        // Validate Password
+        if (!passwordInput.value.match(/.{6,}/)) {
+            highlightInput(passwordInput);
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function highlightInput(inputElement) {
+        inputElement.style.border = "2px solid red";
+    }

@@ -4,8 +4,8 @@
           </header>
           <ul class="nav">
           <li>
-              <a href="dashboard.php">
-                <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+              <a href="sign-data.php">
+                <i class="zmdi zmdi-view-dashboard"></i>User Activation
               </a>
             </li>
             <li>

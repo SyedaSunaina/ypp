@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php           
+<?php
 include("header.php");
 ?>
 
@@ -52,7 +52,7 @@ include("header.php");
   <!-- Shop by category ends -->
 
   <!-- start sale pet all product -->
-  <div class="container mt-5">
+  <div class="container mt-5" style="margin-right:10px">
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6" id="sale-card">
         <div class="row">
@@ -109,8 +109,8 @@ include("header.php");
 </div> -->
   <!-- GIF ENDS -->
 
-   <!-- start footer -->
-   <?php include('footer.php');?>
+  <!-- start footer -->
+  <?php include('footer.php'); ?>
   <!-- Footer End -->
 
 
@@ -120,28 +120,28 @@ include("header.php");
     AOS.init();
 
     let openShopping = document.querySelector('.shopping');
-let closeShopping = document.querySelector('.closeShopping');
-let list = document.querySelector('.list');
-let listCard = document.querySelector('.listCard');
-let body = document.querySelector('body');
-let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
+    let closeShopping = document.querySelector('.closeShopping');
+    let list = document.querySelector('.list');
+    let listCard = document.querySelector('.listCard');
+    let body = document.querySelector('body');
+    let total = document.querySelector('.total');
+    let quantity = document.querySelector('.quantity');
 
 
-if (openShopping) {
-  openShopping.addEventListener('click', () => {
-    body.classList.add('active');
-  });
-}
+    if (openShopping) {
+      openShopping.addEventListener('click', () => {
+        body.classList.add('active');
+      });
+    }
 
-/*openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
-})*/
-if(closeShopping) {
-  closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');
-  });
-}
+    /*openShopping.addEventListener('click', ()=>{
+        body.classList.add('active');
+    })*/
+    if (closeShopping) {
+      closeShopping.addEventListener('click', () => {
+        body.classList.remove('active');
+      });
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

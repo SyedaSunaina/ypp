@@ -14,13 +14,13 @@ $result = $con->query($query);
 
 // Step 3: Fetch products into products array
 if ($result->num_rows > 0) {
-    $products = array();
-    while ($row = $result->fetch_assoc()) {
-        $products[] = $row;
-    }
-   // echo json_encode($products);
+  $products = array();
+  while ($row = $result->fetch_assoc()) {
+    $products[] = $row;
+  }
+  // echo json_encode($products);
 } else {
-   // echo json_encode(array('message' => 'No products found in the "cat" category.'));
+  // echo json_encode(array('message' => 'No products found in the "cat" category.'));
 }
 
 // Close the database connection
@@ -33,8 +33,10 @@ if ($result->num_rows > 0) {
   include("nav.php");
   ?>
 
-  <!-- cat category start -->
-  <h1 class="cat-heading">"Medicines"</h1>
+  <!-- Medicines Start -->
+
+
+  <h1 class="cat-heading">Medicines</h1>
 
   <?php
   include("cart.php");
@@ -47,32 +49,32 @@ if ($result->num_rows > 0) {
   <script>
 
     // cart
-let openShopping = document.querySelector('.shopping');
-let closeShopping = document.querySelector('.closeShopping');
-let list = document.querySelector('.list');
-let listCard = document.querySelector('.listCard');
-let body = document.querySelector('body');
-let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
+    let openShopping = document.querySelector('.shopping');
+    let closeShopping = document.querySelector('.closeShopping');
+    let list = document.querySelector('.list');
+    let listCard = document.querySelector('.listCard');
+    let body = document.querySelector('body');
+    let total = document.querySelector('.total');
+    let quantity = document.querySelector('.quantity');
 
 
-if (openShopping) {
-  openShopping.addEventListener('click', () => {
-    body.classList.add('active');
-  });
-}
+    if (openShopping) {
+      openShopping.addEventListener('click', () => {
+        body.classList.add('active');
+      });
+    }
 
-/*openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
-})*/
-if(closeShopping) {
-  closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');
-  });
-}
+    /*openShopping.addEventListener('click', ()=>{
+        body.classList.add('active');
+    })*/
+    if (closeShopping) {
+      closeShopping.addEventListener('click', () => {
+        body.classList.remove('active');
+      });
+    }
 
-   let products = <?php echo json_encode($products); ?>;
-   
+    let products = <?php echo json_encode($products); ?>;
+
     let listCards = [];
     function initApp() {
       products.forEach((value, key) => {
@@ -92,8 +94,12 @@ if(closeShopping) {
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
        <i class="fa-solid fa-star" style="color: #ebe424;"></i>
-       <button onclick="addToCard(${key})">Add To Cart</button>
-    </div>  
+      <button class="cart-button" onclick="addToCard(${key})">
+                        <span class="add-to-cart">Add to cart</span>
+                        <span class="added">Added</span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-box"></i>
+                   </button></div>  
   </div>  
 </div>
 </div>  `
@@ -103,6 +109,7 @@ if(closeShopping) {
     initApp();
     function addToCard(key) {
       if (listCards[key] == null) {
+        // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
       }
@@ -111,9 +118,9 @@ if(closeShopping) {
     function reloadCard() {
       listCard.innerHTML = '';
       let count = 0;
-      let totalPrice = 0;
+      let totalPrice = Number();
       listCards.forEach((value, key) => {
-        totalPrice = totalPrice + value.price;
+        totalPrice = totalPrice + Number(value.price);
         count = count + value.quantity;
         if (value != null) {
           let newDiv = document.createElement('li');
@@ -137,11 +144,11 @@ if(closeShopping) {
         delete listCards[key];
       } else {
         listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[key].price = quantity * products[key].price.toLocaleString();
       }
       reloadCard();
     }
-    
+
   // CARDS END
   </script>
   <!-- script -->
@@ -156,7 +163,7 @@ if(closeShopping) {
     crossorigin="anonymous"></script>
   <script src="assets/script.js"></script>
   <!-- start footer -->
-  <?php include('footer.php');?>
+  <?php include('footer.php'); ?>
   <!-- Footer End -->
 
 </body>

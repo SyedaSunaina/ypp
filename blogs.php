@@ -16,9 +16,9 @@ include("header.php");
                     <p class="blog-para">We believe finding a reliable,professional pet sitter should be <br> easy.So we
                         make sure every member of our family.</p>
                     <button class="btn-ourservice"><a href="grooming.php"
-                            style="text-decoration: none; color: black;">Our Service↗</a></button><button
+                            style="text-decoration: none; color: black;">Our Service  ↗</a></button><button
                         class="btn-call"><a href="tel:<?php echo $mainsettings['number']; ?>"
-                            style="text-decoration: none; color: black;">📞Schedule a call</a></button>
+                            style="text-decoration: none; color: black;">📞  Schedule a call</a></button>
             </div>
             <div class=" col-md-3 col-lg-3 col-xl-3">
                 <div class="row">
@@ -80,29 +80,29 @@ include("header.php");
                     </h1>
                     <p class="howtopara">
                         Pet care is essential for the well-being and happiness of our furry friends. Providing proper
-                        <br> care
+                         care
                         involves several key aspects. Firstly, nutrition plays a vital role in maintaining their
-                        health.<br> It is important to offer a balanced diet that meets their specific dietary
+                        health.It is important to offer a balanced diet that meets their specific dietary
                         requirements,
                         whether
-                        <br>it's
-                        formulated pet food or a well-planned homemade diet. Regular feeding schedules an <br>
+                        it's
+                        formulated pet food or a well-planned homemade diet. Regular feeding schedules an 
                         appropriate
                         portion control are necessary to prevent obesity or famished.
-                        At our pet shop, we <br> prioritize the health and well-being of your pets. We offer a wide
+                        At our pet shop, we prioritize the health and well-being of your pets. We offer a wide
                         range of
-                        high-quality pet <br> food
-                        options that cater to different dietary needs and preferences. Whether your pet requires <br>
+                        high-quality pet food
+                        options that cater to different dietary needs and preferences. Whether your pet requires
                         specialized nutrition or you
-                        prefer natural and organic options, we have you covered. Our <br> knowledgeable staff is always
+                        prefer natural and organic options, we have you covered. Our knowledgeable staff is always
                         ready to
                         assist you in
-                        choosing the right food for your pet's <br> specific requirements.exercise and physical activity
+                        choosing the right food for your pet's specific requirements.exercise and physical activity
                         are
-                        crucial for pets to stay fit and active. <br> Dogs, for instance, benefit from daily walks
-                        or playtime in a secure environment. Cats enjoy <br> interactive toys and vertical spaces to
+                        crucial for pets to stay fit and active. Dogs, for instance, benefit from daily walks
+                        or playtime in a secure environment. Cats enjoy interactive toys and vertical spaces to
                         climb
-                        and explore. Regular exercise not only helps pets <br> burn off excess energy but also promotes
+                        and explore. Regular exercise not only helps pets burn off excess energy but also promotes
                         mental stimulation and prevents behavioral issues.
                     </p>
             </div>
@@ -120,7 +120,7 @@ include("header.php");
             </div>
             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 " id="client">
                 <div class="client-imgbg mt-2">
-                    <img src="assets/image/clients.png" alt="Award" class="award-img">
+                    <img src="assets/image/client.png" alt="Award" class="award-img">
                 </div>
                 <span class="num award-heading" data-val="96">96</span><span class="fw bold">K</span>
                 <h6 class="award-text">Clients</h6>

@@ -10,7 +10,7 @@ include("nav.php");
 include("cart.php");
 ?>
     <!-- banner starts -->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row mt-1">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="gif-container">
@@ -20,7 +20,7 @@ include("cart.php");
         </div>
     </div>
 
-    <div class="container-fluid" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
         <div class="row mt-5">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <h1 class="banner-heading">Providing a <span>stress-free</span> <br> Pet Experience <img
@@ -30,7 +30,7 @@ include("cart.php");
         </div>
     </div>
 
-    <div class="container-fluid" data-aos="zoom-in">
+    <div class="container" data-aos="zoom-in">
         <div class="row">
             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 mt-4">
                 <img src="assets/image/paws.png" alt="Paws" class="home-paw">
@@ -49,7 +49,7 @@ include("cart.php");
     <!-- banner end -->
 
     <!-- start services -->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row mt-4">
             <h1 class="petservice-heading">Our Pet Services</h1>
             <p class="service-para">We value high-quality care and stable,reliable <br> relationships with our clients
@@ -99,7 +99,7 @@ include("cart.php");
     </div>
 
     <!-- bestfriend -->
-    <div class="container-fluid" data-aos="flip-up">
+    <div class="container" data-aos="flip-up">
         <div class="row">
             <div class="bestfriend-img">
                 <img src="assets/image/bhtsaredoggy.png" alt="" class="bestfriend-img">
@@ -115,9 +115,6 @@ include("cart.php");
                 friends and endless joy. </p>
         </div>
     </div>
-
-
-
     <?php include('footer.php');?>
 
 
