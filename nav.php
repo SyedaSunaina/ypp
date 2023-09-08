@@ -163,7 +163,7 @@ include("connection.php");
 </div>
 <!-- SIGNUP DATABASE -->
 <?php
-$con = mysqli_connect("localhost", "root", "", "ypp");
+
 
 if (isset($_POST['register'])) {
   $fullname = $_POST['fullname'];

@@ -39,7 +39,7 @@
 
               
                $fetch_user = mysqli_query($con,"SELECT * FROM signup");
-  $result = $con->query($query);
+              $result = $con->query($query);
                 foreach ($fetch_user as $user) {
 
                     echo "<tr>";
