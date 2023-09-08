@@ -3,7 +3,7 @@
 //Set Default Timezone
 date_default_timezone_set("Asia/Karachi");
 // Step 1: Database connection - Local
-//$con = new mysqli('localhost', 'root', '', 'ypp');
+// $con = new mysqli('localhost', 'root', '', 'ypp');
 //Live Connection
 $con = new mysqli('localhost', 'sunaina_root', 'ypp_sunaina', 'sunaina_ypp');
 

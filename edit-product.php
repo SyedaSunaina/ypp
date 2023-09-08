@@ -64,7 +64,7 @@
 
         // Fetch the product details to pre-fill the form
         if (isset($_GET['id'])) {
-            $con = new mysqli('localhost', 'root', '', 'ypp');
+           
             if ($con->connect_error) {
                 die('Connection failed: ' . $con->connect_error);
             }
